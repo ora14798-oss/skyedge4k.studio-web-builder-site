@@ -65,6 +65,7 @@ const Navbar = ({
     {title: "What We Do", url: "#whatwedo"},
     {title: "Reviews", url: "#reviews"},
     {title: "Contact Us", url: "#contact"},
+    {title: "Pricing", url: "#pricing"},
   ],
   auth = {
     contact: {title: "Chat on WhatsApp", url: "https://wa.me/573001614490"},

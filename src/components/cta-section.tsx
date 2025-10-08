@@ -1,77 +1,88 @@
-import {MapPin, Phone, Mail} from "lucide-react";
+"use client";
+
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail } from "lucide-react";
 import ContactForm from "./contact-form";
 
 export function CTASectionForm() {
   return (
     <section
       id="contact"
-      className="relative py-20 overflow-hidden scroll-mt-20"
+      className="relative w-screen bg-background py-16 md:py-20 overflow-hidden scroll-mt-20 mx-4 shadow-2xl"
     >
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage:
-            "url('https://res.cloudinary.com/dqksqtluq/image/upload/v1755977342/Flat_Vector_Logo_for_Design_Studio_zvog8h.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "brightness(0.35)",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-sky-900/70"></div>
+      {/* 🎥 Background Video */}
+      <motion.video
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, ease: "easeInOut" }}
+        className="absolute inset-0 z-0 h-full w-full object-cover"
+        src="https://res.cloudinary.com/dqksqtluq/video/upload/v1759872027/itachi-shillouette-in-front-of-the-red-moon.3840x2160_i3hao6.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+
+      {/* 🌫 Soft Fade Overlay (Top & Bottom) */}
+      <div className="absolute inset-0 z-[1] pointer-events-none">
+        {/* Top fade – subtle dark gradient */}
+        <div className="absolute top-0 w-full h-20 bg-gradient-to-b from-blue-950/60 via-transparent to-transparent"></div>
+
+        {/* Bottom fade – soft transparency to blend with next section */}
+        <div className="absolute bottom-0 w-full h-20 bg-gradient-to-t from-blue-950/60 via-transparent to-transparent"></div>
       </div>
 
+      {/* 🎨 Gradient Overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/80 to-sky-900/70 z-0"></div>
+
+      {/* ✨ Section Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* 📝 Text Content */}
           <div className="text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Elevate Your Brand with SkyEdge4K Studio?
+              Ready to Boost Your Business with a High-Performance Website?
             </h2>
 
             <p className="text-lg text-white/90 mb-6">
-              SkyEdge4K Studio, based in Colombia, blends creativity,
-              technology, and strategy to help businesses grow and stand out in
-              competitive markets. We specialize in{" "}
-              <strong>social media management</strong>,{" "}
-              <strong>content creation</strong>, <strong>SEO</strong>,{" "}
-              <strong>web development</strong>,{" "}
-              <strong>marketing strategy</strong>,{" "}
-              <strong>paid advertising</strong>, and{" "}
-              <strong>3D virtual tours</strong> for real estate and construction
-              projects.
+              At <strong className="text-blue-600">SkyEdge4K</strong>, we design and
+              develop stunning, fast, and SEO-optimized websites that not only
+              look amazing they{" "}
+              <em className="text-white">convert visitors into real clients</em>.
+              Whether you need a corporate site, landing page, or e-commerce
+              store, our web team in Colombia crafts digital experiences that
+              elevate your brand and grow your sales.
             </p>
 
             <ul className="space-y-3 mb-6 text-white/90">
               <li className="flex items-center">
                 <span className="mr-2">✓</span>
-                <span>
-                  Engaging social media campaigns designed to attract and
-                  convert
-                </span>
+                Modern responsive websites that look perfect on every device
               </li>
               <li className="flex items-center">
                 <span className="mr-2">✓</span>
-                <span>
-                  High-quality content creation that delivers maximum impact
-                </span>
+                Fast loading, SEO optimized pages built for Google ranking
               </li>
               <li className="flex items-center">
                 <span className="mr-2">✓</span>
-                <span>
-                  SEO and web development that drive visibility and results
-                </span>
+                Conversion-focused design that turns traffic into customers
               </li>
               <li className="flex items-center">
                 <span className="mr-2">✓</span>
-                <span>
-                  Tailored marketing strategies aligned with your business goals
-                </span>
+                Custom development for businesses, e-commerce & landing pages
               </li>
               <li className="flex items-center">
                 <span className="mr-2">✓</span>
-                <span>Fast and professional delivery with full support</span>
+                Full support from concept to launch and beyond
               </li>
             </ul>
 
+            <p className="text-lg text-white/90 mb-8 font-medium">
+              Your website is your brand’s first impression. Let’s make it
+              unforgettable.
+            </p>
+
+            {/* 📍 Contact Info */}
             <div className="space-y-2 text-white/90 text-sm">
               <p className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
@@ -107,7 +118,8 @@ export function CTASectionForm() {
             </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20">
+          {/* 🧾 Contact Form */}
+          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 shadow-lg">
             <ContactForm />
           </div>
         </div>

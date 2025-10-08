@@ -1,9 +1,9 @@
 "use client";
 
-import {motion} from "framer-motion";
-import {ArrowRight} from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import React from "react";
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
@@ -13,9 +13,9 @@ const HeroSection = () => {
     >
       {/* 🎥 Background Video */}
       <motion.video
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{duration: 2, ease: "easeInOut"}}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, ease: "easeInOut" }}
         className="absolute inset-0 z-0 h-full w-full object-cover bg-opacity-20"
         src="https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
         autoPlay
@@ -41,12 +41,13 @@ const HeroSection = () => {
           <span className="text-blue-500 font-extrabold">websites</span>
         </h1>
 
-        {/* 🧠 Subtext */}
-        <p className="text-white/95 mt-5 max-w-md sm:max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] leading-relaxed text-sm sm:text-base px-2">
-          <strong>SkyEdge4K.Studio</strong> builds{" "}
-          <strong>high-performance websites</strong> with integrated{" "}
-          <strong>SEO and Google Ads</strong> strategies that attract real
-          clients and drive measurable growth for your business.
+        {/* 🧠 Subtext (Made slightly bigger & bolder) */}
+        <p className="text-white/95 mt-5 max-w-md sm:max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] leading-relaxed text-base sm:text-lg font-semibold px-2">
+          <strong className="text-white">SkyEdge4K.Studio</strong> builds{" "}
+          <strong className="text-white">high-performance websites</strong> with
+          integrated <strong className="text-white">SEO</strong> and{" "}
+          <strong className="text-white">Google Ads</strong> strategies that
+          attract real clients and drive measurable growth for your business.
         </p>
 
         {/* CTA Buttons */}
@@ -71,4 +72,4 @@ const HeroSection = () => {
   );
 };
 
-export {HeroSection};
+export { HeroSection };

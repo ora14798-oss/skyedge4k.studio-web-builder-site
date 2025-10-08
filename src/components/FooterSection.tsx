@@ -90,6 +90,11 @@ const FooterSection = () => {
                     Contact us
                   </a>
                 </li>
+                 <li>
+                  <a href="#pricing" className="hover:text-white transition">
+                    Pricing
+                  </a>
+                </li>
               </ul>
             </div>
 

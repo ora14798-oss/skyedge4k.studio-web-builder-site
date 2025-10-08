@@ -1,9 +1,11 @@
-import type {Metadata} from "next";
-import {Geist, Geist_Mono} from "next/font/google";
+// app/layout.tsx
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {Navbar} from "@/components/Navbar";
-import {getSEOTags, SchemaMarkup} from "@/lib/seo";
+import { Navbar } from "@/components/Navbar";
+import { getSEOTags, SchemaMarkup } from "@/lib/seo"; // import actual seo utilities
 
+// 🧩 Fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,27 +16,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// ✅ Updated SEO Metadata for SkyEdge 4K
 export const metadata: Metadata = getSEOTags({
-  title: "SkyEdge4K.Studio - Digital Marketing Agency & Creative Studio",
+  title: "SkyEdge 4K | Web Design, SEO & Marketing Agency in Cartagena",
   description:
-    "SkyEdge4K.Studio is a full-service digital agency offering SEO, social media management, content creation, web development, paid ads, branding strategies, and 3D virtual tours. Helping businesses worldwide grow their online presence.",
+    "SkyEdge 4K is a professional web design and digital marketing agency based in Cartagena, Colombia. We build high-performance websites, manage SEO, Google Ads, and social media strategies that grow your business.",
   canonicalUrlRelative: "/",
   keywords: [
-    "digital marketing agency",
-    "SEO services",
+    "web design Cartagena",
+    "SEO agency Colombia",
+    "digital marketing Cartagena",
     "social media management",
-    "content creation",
+    "Google Ads campaigns",
+    "marketing strategy",
+    "SkyEdge 4K",
     "web development",
-    "ecommerce websites",
-    "Google Ads management",
-    "Facebook Ads services",
-    "paid advertising",
-    "branding and strategy",
-    "3D virtual tours",
-    "real estate marketing",
-    "creative marketing agency",
-    "SkyEdge4K.Studio",
-    "digital growth solutions",
+    "branding services",
+    "creative studio Cartagena",
+    "3D virtual tours Colombia",
   ],
 });
 
@@ -45,8 +44,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Schema.org for rich results */}
+        <SchemaMarkup />
+
+        {/* ✅ Favicon and basic site meta */}
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#0a0a0a" />
+      </head>
+
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <Navbar />
         {children}
