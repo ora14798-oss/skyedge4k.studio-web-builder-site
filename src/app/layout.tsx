@@ -5,6 +5,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { getSEOTags, SchemaMarkup } from "@/lib/seo"; // import actual seo utilities
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // 🧩 Fonts
 const geistSans = Geist({
@@ -60,6 +61,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Analytics />
+        <SpeedInsights/>
       </body>
     </html>
   );
