@@ -2,10 +2,25 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const [videoSrc, setVideoSrc] = useState(
+    "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
+  );
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Serve smaller video for mobile
+      if (window.innerWidth <= 768) {
+        setVideoSrc(
+          "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.720p.mp4"
+        );
+      }
+    }
+  }, []);
+
   return (
     <section
       id="hero"
@@ -17,11 +32,12 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 2, ease: "easeInOut" }}
         className="absolute inset-0 z-0 h-full w-full object-cover bg-opacity-20"
-        src="https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
         autoPlay
         muted
         loop
         playsInline
+        poster="https://res.cloudinary.com/dqksqtluq/image/upload/v1759726154/eclipse-over-silent-falls-poster.jpg"
+        src={videoSrc} // dynamically set source based on screen width
       />
 
       {/* 🔹 Content */}

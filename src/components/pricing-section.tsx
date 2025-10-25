@@ -15,11 +15,11 @@ export function PricingSection() {
   const plans = [
     {
       name: "Web Development",
-      price: "From $865 USD",
-      description: "Landing Page or Full Website (5 pages)",
+      price: "From $795 USD",
+      description: "Landing Page, Full Website and online store development",
       features: [
-        "Landing Page – $865 USD",
-        "Full Website (5 pages) – $1,500 USD",
+        "Landing Page – $795 USD",
+        "Full Website – $1,000 USD",
         "Responsive design (mobile + desktop)",
         "Basic SEO optimization included",
         "Fast and secure hosting integration",

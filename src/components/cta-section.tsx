@@ -50,7 +50,7 @@ export function CTASectionForm() {
               look amazing they{" "}
               <em className="text-white">convert visitors into real clients</em>.
               Whether you need a corporate site, landing page, or e-commerce
-              store, our web team in Colombia crafts digital experiences that
+              store, our web team in Colombia and in the USA crafts digital experiences that
               elevate your brand and grow your sales.
             </p>
 
@@ -87,12 +87,12 @@ export function CTASectionForm() {
               <p className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
                 <a
-                  href="https://www.google.com/maps/search/Cartagena+de+Indias,+Colombia+-+Marbella"
+                  href="https://maps.app.goo.gl/XzHbnBju9W9kqbhcA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-semibold hover:underline transition-transform duration-300 ease-in-out hover:scale-105"
                 >
-                  Cartagena de Indias, Colombia – Marbella
+                  Anaheim California, USA & Cartagena, Colombia
                 </a>
               </p>
               <p className="flex items-center gap-2">
@@ -101,11 +101,20 @@ export function CTASectionForm() {
                   href="https://wa.me/573001614490"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline transition-transform duration-300 ease-in-out hover:scale-105"
+                  className="hover:underline transition-transform duration-300 ease-in-out hover:scale-105 font-semibold"
                 >
-                  +57 300 161 4490
+                 Our number in Colombia: +57 300 161 4490
                 </a>
               </p>
+              <p className="flex items-center gap-2">
+    <Phone className="w-4 h-4" />
+    <a
+      href="tel:+16574528646"
+      className="hover:underline transition-transform duration-300 ease-in-out hover:scale-105 font-semibold"
+    >
+      Our number in the USA: +1 (657) 452-8646
+    </a>
+  </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 <a

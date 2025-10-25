@@ -71,8 +71,10 @@ const FooterSection = () => {
             <div>
               <h4 className="font-semibold mb-4 text-lg">Connect With Us</h4>
               <p className="text-gray-400 mb-4">
-                Cartagena, Colombia
+                Anaheim California, USA 
                 <br />
+                 <a href="tel:+16574528646" className="hover:text-white transition font-semibold">+1 (657) 452-8646</a>
+                <br />  
                 <a href="mailto:skyedge4k@gmail.com" className="hover:text-white transition">
                   skyedge4k@gmail.com
                 </a>
