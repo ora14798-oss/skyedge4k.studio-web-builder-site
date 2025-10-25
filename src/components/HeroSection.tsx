@@ -7,17 +7,17 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   const [videoSrc, setVideoSrc] = useState(
-    "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
+    "https://res.cloudinary.com/dqksqtluq/video/upload/f_mp4,vc_h264/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
   );
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // Serve smaller video for mobile devices
-      if (window.innerWidth <= 768) {
-        setVideoSrc(
-          "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.720p.mp4"
-        );
-      }
+      const isMobile = window.innerWidth <= 768;
+      setVideoSrc(
+        isMobile
+          ? "https://res.cloudinary.com/dqksqtluq/video/upload/f_mp4,vc_h264/v1759726154/eclipse-over-silent-falls.720p.mp4"
+          : "https://res.cloudinary.com/dqksqtluq/video/upload/f_mp4,vc_h264/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
+      );
     }
   }, []);
 
@@ -28,7 +28,7 @@ const HeroSection = () => {
     >
       {/* 🎥 Background Video */}
       <motion.video
-        key={videoSrc} // ensures re-render on source change
+        key={videoSrc}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, ease: "easeInOut" }}
@@ -39,7 +39,6 @@ const HeroSection = () => {
         playsInline
         preload="auto"
         poster="https://res.cloudinary.com/dqksqtluq/image/upload/v1759726154/eclipse-over-silent-falls-poster.jpg"
-        // Critical for mobile autoplay and background visibility:
         style={{
           position: "absolute",
           top: 0,
@@ -47,12 +46,12 @@ const HeroSection = () => {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          pointerEvents: "none", // ensures no interference with touch
+          pointerEvents: "none",
           zIndex: 0,
+          backgroundColor: "black",
         }}
       >
         <source src={videoSrc} type="video/mp4" />
-        {/* Fallback text */}
         Your browser does not support the video tag.
       </motion.video>
 
@@ -91,6 +90,7 @@ const HeroSection = () => {
             <a href="#contact">Start Your Website Project</a>
             <ArrowRight className="size-4 -rotate-45 transition-all ease-out group-hover:ml-2 group-hover:rotate-0" />
           </Button>
+
           <Button
             variant="default"
             className="text-sm sm:text-md group flex w-full sm:w-fit items-center justify-center gap-2 rounded-full px-5 py-2 tracking-tight"
