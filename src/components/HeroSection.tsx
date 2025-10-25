@@ -6,17 +6,19 @@ import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const [videoSrc, setVideoSrc] = useState(
-    "https://res.cloudinary.com/dqksqtluq/video/upload/f_mp4,vc_h264/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
+    "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
   );
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const isMobile = window.innerWidth <= 768;
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
       setVideoSrc(
-        isMobile
-          ? "https://res.cloudinary.com/dqksqtluq/video/upload/f_mp4,vc_h264/v1759726154/eclipse-over-silent-falls.720p.mp4"
-          : "https://res.cloudinary.com/dqksqtluq/video/upload/f_mp4,vc_h264/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
+        mobile
+          ? "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.720p.mp4"
+          : "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
       );
     }
   }, []);
@@ -26,30 +28,40 @@ const HeroSection = () => {
       id="hero"
       className="relative w-screen bg-background pt-20 md:pt-8 pb-24 md:py-32 overflow-hidden"
     >
-      {/* 🎥 Background Video */}
-      <video
-        className="absolute inset-0 z-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="https://res.cloudinary.com/dqksqtluq/image/upload/v1759726154/eclipse-over-silent-falls-poster.jpg"
-        src={videoSrc}
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          pointerEvents: "none",
-          zIndex: 0,
-          backgroundColor: "black",
-        }}
-      >
-        Your browser does not support the video tag.
-      </video>
+      {/* Background: Video for desktop, Image for mobile */}
+      {!isMobile ? (
+        <video
+          className="absolute inset-0 z-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="https://res.cloudinary.com/dqksqtluq/image/upload/v1759726154/eclipse-over-silent-falls-poster.jpg"
+          src={videoSrc}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            pointerEvents: "none",
+            zIndex: 0,
+            backgroundColor: "black",
+          }}
+        >
+          Your browser does not support the video tag.
+        </video>
+      ) : (
+        <div
+          className="absolute inset-0 z-0 h-full w-full bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://res.cloudinary.com/dqksqtluq/image/upload/v1761423475/Screenshot_2025-10-25_151717_guyrra.png')",
+          }}
+        />
+      )}
 
       {/* 🔹 Content Overlay with animation */}
       <motion.div
