@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // Serve smaller video for mobile
+      // Serve smaller video for mobile devices
       if (window.innerWidth <= 768) {
         setVideoSrc(
           "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.720p.mp4"
@@ -28,17 +28,33 @@ const HeroSection = () => {
     >
       {/* 🎥 Background Video */}
       <motion.video
+        key={videoSrc} // ensures re-render on source change
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="absolute inset-0 z-0 h-full w-full object-cover bg-opacity-20"
+        className="absolute inset-0 z-0 h-full w-full object-cover"
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
         poster="https://res.cloudinary.com/dqksqtluq/image/upload/v1759726154/eclipse-over-silent-falls-poster.jpg"
-        src={videoSrc} // dynamically set source based on screen width
-      />
+        // Critical for mobile autoplay and background visibility:
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          pointerEvents: "none", // ensures no interference with touch
+          zIndex: 0,
+        }}
+      >
+        <source src={videoSrc} type="video/mp4" />
+        {/* Fallback text */}
+        Your browser does not support the video tag.
+      </motion.video>
 
       {/* 🔹 Content */}
       <div className="container relative z-20 mx-auto flex flex-col items-center justify-center text-center px-4">
@@ -57,7 +73,7 @@ const HeroSection = () => {
           <span className="text-blue-500 font-extrabold">websites</span>
         </h1>
 
-        {/* 🧠 Subtext (Made slightly bigger & bolder) */}
+        {/* 🧠 Subtext */}
         <p className="text-white/95 mt-5 max-w-md sm:max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] leading-relaxed text-base sm:text-lg font-semibold px-2">
           <strong className="text-white">SkyEdge4K.Studio</strong> builds{" "}
           <strong className="text-white">high-performance websites</strong> with
