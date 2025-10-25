@@ -27,11 +27,7 @@ const HeroSection = () => {
       className="relative w-screen bg-background pt-20 md:pt-8 pb-24 md:py-32 overflow-hidden"
     >
       {/* 🎥 Background Video */}
-      <motion.video
-        key={videoSrc}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+      <video
         className="absolute inset-0 z-0 h-full w-full object-cover"
         autoPlay
         muted
@@ -39,6 +35,7 @@ const HeroSection = () => {
         playsInline
         preload="auto"
         poster="https://res.cloudinary.com/dqksqtluq/image/upload/v1759726154/eclipse-over-silent-falls-poster.jpg"
+        src={videoSrc}
         style={{
           position: "absolute",
           top: 0,
@@ -51,12 +48,16 @@ const HeroSection = () => {
           backgroundColor: "black",
         }}
       >
-        <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
-      </motion.video>
+      </video>
 
-      {/* 🔹 Content */}
-      <div className="container relative z-20 mx-auto flex flex-col items-center justify-center text-center px-4">
+      {/* 🔹 Content Overlay with animation */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+        className="container relative z-20 mx-auto flex flex-col items-center justify-center text-center px-4"
+      >
         {/* Tag */}
         <Button
           variant="secondary"
@@ -66,13 +67,13 @@ const HeroSection = () => {
           <span>Professional Web Design & SEO Agency</span>
         </Button>
 
-        {/* 💥 Headline */}
+        {/* Headline */}
         <h1 className="relative z-10 mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
           We design & build{" "}
           <span className="text-blue-500 font-extrabold">websites</span>
         </h1>
 
-        {/* 🧠 Subtext */}
+        {/* Subtext */}
         <p className="text-white/95 mt-5 max-w-md sm:max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] leading-relaxed text-base sm:text-lg font-semibold px-2">
           <strong className="text-white">SkyEdge4K.Studio</strong> builds{" "}
           <strong className="text-white">high-performance websites</strong> with
@@ -99,7 +100,7 @@ const HeroSection = () => {
             <ArrowRight className="size-4 -rotate-45 transition-all ease-out group-hover:ml-2 group-hover:rotate-0" />
           </Button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
