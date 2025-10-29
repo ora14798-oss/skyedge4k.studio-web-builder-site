@@ -20,14 +20,14 @@ const geistMono = Geist_Mono({
 
 // ✅ Updated SEO Metadata for SkyEdge 4K
 export const metadata: Metadata = getSEOTags({
-  title: "SkyEdge 4K | Web Design, SEO & Marketing Agency in Cartagena",
+  title: "SkyEdge 4K | Web Design, SEO & Marketing Agency in USA & Colombia",
   description:
-    "SkyEdge 4K is a professional web design and digital marketing agency based in Cartagena, Colombia. We build high-performance websites, manage SEO, Google Ads, and social media strategies that grow your business.",
+    "SkyEdge 4K is a professional web design and digital marketing agency based in Cartagena, Colombia & California, USA. We build high-performance websites, manage SEO, Google Ads, and social media strategies that grow your business.",
   canonicalUrlRelative: "/",
   keywords: [
-    "web design Cartagena",
-    "SEO agency Colombia",
-    "digital marketing Cartagena",
+    "web design",
+    "SEO agency Colombia & USA",
+    "digital marketing Cartagena & California",
     "social media management",
     "Google Ads campaigns",
     "marketing strategy",
@@ -35,7 +35,6 @@ export const metadata: Metadata = getSEOTags({
     "web development",
     "branding services",
     "creative studio Cartagena",
-    "3D virtual tours Colombia",
   ],
 });
 
