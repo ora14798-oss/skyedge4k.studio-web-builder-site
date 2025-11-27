@@ -11,7 +11,7 @@ const testimonials = [
     name: "Laura Gómez",
     role: "CEO, Café del Sol",
     avatar:
-      "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701465/MELDENNE_S_5_teaoee.png",
+      "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279802/cld-sample.jpg",
     content:
       "SkyEdge4K.studio built our custom-coded website from scratch. It’s fast, beautiful, and clients love it. No templates, no limits!",
   },
@@ -19,7 +19,7 @@ const testimonials = [
     name: "Carlos Rivera",
     role: "Founder, UrbanStore",
     avatar:
-      "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701462/MELDENNE_S_9_z3ppv7.png",
+      "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279797/samples/man-portrait.jpg",
     content:
       "We stopped paying monthly for Shopify. SkyEdge4K created a coded e-commerce site we fully own — faster and more profitable.",
   },
@@ -27,7 +27,7 @@ const testimonials = [
     name: "Sofía Morales",
     role: "Marketing Director, Evolve Agency",
     avatar:
-      "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701462/MELDENNE_S_8_ot8ukw.png",
+      "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279796/samples/outdoor-woman.jpg",
     content:
       "Their SEO strategy and Google Ads campaign brought us measurable results. We doubled our client leads in the first month.",
   },
@@ -35,7 +35,7 @@ const testimonials = [
     name: "Andrés López",
     role: "Real Estate Developer, NovaHomes",
     avatar:
-      "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701464/MELDENNE_S_6_mvzc0q.png",
+      "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279797/samples/man-on-a-street.jpg",
     content:
       "SkyEdge4K created a dynamic property website with 3D tours and perfect SEO. It’s modern, responsive, and brings real buyers.",
   },
@@ -43,7 +43,7 @@ const testimonials = [
     name: "Fernanda Torres",
     role: "Entrepreneur",
     avatar:
-      "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701462/MELDENNE_S_7_lvqcxo.png",
+      "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279778/sample.jpg",
     content:
       "They don’t use WordPress or drag-and-drop tools — everything is coded. The site loads instantly and ranks high on Google.",
   },
@@ -51,7 +51,7 @@ const testimonials = [
     name: "Daniel Pérez",
     role: "Owner, FitZone Gym",
     avatar:
-      "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701465/MELDENNE_S_5_teaoee.png",
+      "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279783/samples/people/smiling-man.jpg",
     content:
       "My fitness website looks professional and converts visitors to members daily. SkyEdge4K handles our SEO and ads with precision.",
   },
@@ -59,7 +59,7 @@ const testimonials = [
     name: "Camila Ríos",
     role: "Marketing Consultant",
     avatar:
-      "https://res.cloudinary.com/dqksqtluq/image/upload/v1759250916/Untitled_design_ycyrom.png",
+      "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279785/samples/people/bicycle.jpg",
     content:
       "Their team understands branding and marketing deeply. My clients constantly compliment my new website’s design and performance.",
   },
@@ -67,7 +67,7 @@ const testimonials = [
     name: "Miguel Herrera",
     role: "Photographer",
     avatar:
-      "https://res.cloudinary.com/dqksqtluq/image/upload/v1759537067/ChatGPT_Image_Oct_3_2025_07_17_33_PM_uf1fo1.png",
+      "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279796/samples/look-up.jpg",
     content:
       "Finally, a studio that builds real websites. My portfolio now stands out — it’s fast, stunning, and easy to update.",
   },

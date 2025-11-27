@@ -211,7 +211,7 @@ const MainFeatureSection = () => {
             {/* Image 1 */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg group">
               <img
-                src="https://res.cloudinary.com/dqksqtluq/image/upload/v1756835035/Screenshot_2025-09-02_122800_abjclq.png"
+                src="https://res.cloudinary.com/dtza2wtax/image/upload/v1764280443/creat_a_phot_of_a_home_page_of_a_website_for_car_rental_company_wlnpzx.jpg"
                 alt="Website Design Example 1"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -221,7 +221,7 @@ const MainFeatureSection = () => {
             {/* Image 2 */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg group">
               <img
-                src="https://res.cloudinary.com/dqksqtluq/image/upload/v1759717165/create_a_phot_of_a_home_page_of_a_website_for_lip-gloss_product_tloami.jpg"
+                src="https://res.cloudinary.com/dtza2wtax/image/upload/v1764280200/Screenshot_2025-09-02_122800_sofmhz.png"
                 alt="Website Design Example 2"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -231,7 +231,7 @@ const MainFeatureSection = () => {
             {/* Image 3 */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg group">
               <img
-                src="https://res.cloudinary.com/dqksqtluq/image/upload/v1759717166/creat_a_phot_of_a_home_page_of_a_website_for_car_rental_company_vtuhkx.jpg"
+                src="https://res.cloudinary.com/dtza2wtax/image/upload/v1764280202/Screenshot_2025-09-02_121055_pptpsn.png"
                 alt="Website Design Example 3"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -241,7 +241,7 @@ const MainFeatureSection = () => {
             {/* Image 4 */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg group sm:col-span-2 lg:col-span-1">
               <img
-                src="https://res.cloudinary.com/dqksqtluq/image/upload/v1759717297/Screenshot_2025-10-05_212031_zvrmtm.png"
+                src="https://res.cloudinary.com/dtza2wtax/image/upload/v1764280201/Screenshot_2025-09-02_120816_makgy8.png"
                 alt="Website Design Example 4"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -251,7 +251,7 @@ const MainFeatureSection = () => {
             {/* Image 5 */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg group sm:col-span-2 lg:col-span-1">
               <img
-                src="https://res.cloudinary.com/dqksqtluq/image/upload/v1759718641/Screenshot_2025-10-05_214130_smepul.png"
+                src="https://res.cloudinary.com/dtza2wtax/image/upload/v1764280197/Screenshot_2025-10-05_214037_dffjny.png"
                 alt="Website Design Example 5"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -261,7 +261,7 @@ const MainFeatureSection = () => {
             {/* Image 6 */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg group sm:col-span-2 lg:col-span-1">
               <img
-                src="https://res.cloudinary.com/dqksqtluq/image/upload/v1759718640/Screenshot_2025-10-05_214037_echkvd.png"
+                src="https://res.cloudinary.com/dtza2wtax/image/upload/v1764280196/Screenshot_2025-10-05_214309_x4kgfz.png"
                 alt="Website Design Example 6"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -271,7 +271,7 @@ const MainFeatureSection = () => {
             {/* Image 7 */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg group sm:col-span-2 lg:col-span-1">
               <img
-                src="https://res.cloudinary.com/dqksqtluq/image/upload/v1759718647/Screenshot_2025-10-05_214309_ydetjz.png"
+                src="https://res.cloudinary.com/dtza2wtax/image/upload/v1764280195/Screenshot_2025-10-05_214130_vpsdg9.png"
                 alt="Website Design Example 7"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -281,8 +281,18 @@ const MainFeatureSection = () => {
             {/* Image 8 */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg group sm:col-span-2 lg:col-span-1">
               <img
-                src="https://res.cloudinary.com/dqksqtluq/image/upload/v1759718644/Screenshot_2025-10-05_214218_x48opl.png"
+                src="https://res.cloudinary.com/dtza2wtax/image/upload/v1764281752/create_a_phot_of_a_home_page_of_a_website_for_lip-gloss_product_phg7uk.jpg"
                 alt="Website Design Example 8"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+
+            {/* Image 9 */}
+            <div className="relative overflow-hidden rounded-2xl shadow-lg group sm:col-span-2 lg:col-span-1">
+              <img
+                src="https://res.cloudinary.com/dtza2wtax/image/upload/v1764280195/Screenshot_2025-10-05_214218_gtm16t.png"
+                alt="Website Design Example 9"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -295,12 +305,12 @@ const MainFeatureSection = () => {
       <div className="relative bg-primary py-16 sm:py-24 overflow-hidden">
         {/* Background Video */}
         <video
-          src="https://res.cloudinary.com/dqksqtluq/video/upload/v1759698337/full-moon-samurai.3840x2160_po6660.mp4"
+          src="https://res.cloudinary.com/dtza2wtax/video/upload/v1764280473/itachi-shillouette-in-front-of-the-red-moon.3840x2160_rb24gp.mp4"
           autoPlay
           loop
           muted
           playsInline
-          className="absolute right-(-8) top-0 h-full w-auto min-w-[50%] object-cover opacity-100"
+          className="absolute right-(-8) top-0 h-full w-full object-cover opacity-100"
         />
 
         {/* Overlay to improve contrast */}

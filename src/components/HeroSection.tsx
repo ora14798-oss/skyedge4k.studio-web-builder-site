@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [videoSrc, setVideoSrc] = useState(
-    "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
+    "https://res.cloudinary.com/dtza2wtax/video/upload/v1764280467/eclipse-over-silent-falls.3840x2160_batyxf.mp4"
   );
 
   useEffect(() => {
@@ -17,8 +17,8 @@ const HeroSection = () => {
       setIsMobile(mobile);
       setVideoSrc(
         mobile
-          ? "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.720p.mp4"
-          : "https://res.cloudinary.com/dqksqtluq/video/upload/v1759726154/eclipse-over-silent-falls.3840x2160_vx3nye.mp4"
+          ? "https://res.cloudinary.com/dtza2wtax/video/upload/v1764280467/eclipse-over-silent-falls.3840x2160_batyxf.mp4"
+          : "https://res.cloudinary.com/dtza2wtax/video/upload/v1764280467/eclipse-over-silent-falls.3840x2160_batyxf.mp4"
       );
     }
   }, []);
@@ -37,7 +37,7 @@ const HeroSection = () => {
           loop
           playsInline
           preload="auto"
-          poster="https://res.cloudinary.com/dqksqtluq/image/upload/v1759726154/eclipse-over-silent-falls-poster.jpg"
+          poster="https://res.cloudinary.com/dtza2wtax/video/upload/v1764280467/eclipse-over-silent-falls.3840x2160_batyxf.mp4"
           src={videoSrc}
           style={{
             position: "absolute",

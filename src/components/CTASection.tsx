@@ -6,7 +6,7 @@ const CTASection = () => {
       <div className="relative flex w-full items-center justify-center bg-[url('https://res.cloudinary.com/dqksqtluq/image/upload/v1759705000/skyedge-bg-cta.webp')] bg-cover bg-center py-20 md:py-32 text-center md:p-24 overflow-hidden">
         {/* 🎥 Background Video */}
         <video
-          src="https://res.cloudinary.com/dqksqtluq/video/upload/v1759720395/sakura-with-full-moon.3840x2160_am5dmn.mp4"
+          src="https://res.cloudinary.com/dtza2wtax/video/upload/v1764280462/sakura-with-full-moon.3840x2160_tvfyv9.mp4"
           autoPlay
           loop
           muted

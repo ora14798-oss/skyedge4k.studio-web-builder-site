@@ -15,56 +15,56 @@ const LogosSections = () => {
       id: "logo-1",
       description: "Client 1",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701465/MELDENNE_S_5_teaoee.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280456/ChatGPT_Image_Sep_26_2025_02_57_43_PM_aufth7.png",
       className: "h-14 w-auto sm:h-16",
     },
     {
       id: "logo-2",
       description: "Client 2",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701464/MELDENNE_S_6_mvzc0q.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280453/ChatGPT_Image_Oct_3_2025_07_17_33_PM_ezkfg1.png",
       className: "h-14 w-auto sm:h-16",
     },
     {
       id: "logo-3",
       description: "Client 3",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701462/MELDENNE_S_7_lvqcxo.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280453/Untitled_design_weojka.png",
       className: "h-14 w-auto sm:h-16",
     },
     {
       id: "logo-4",
       description: "Client 4",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701462/MELDENNE_S_8_ot8ukw.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280444/MELDENNE_S_5_udjslu.png",
       className: "h-14 w-auto sm:h-16",
     },
     {
       id: "logo-5",
       description: "Client 5",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701462/MELDENNE_S_9_z3ppv7.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280444/MELDENNE_S_6_rhgeun.png",
       className: "h-14 w-auto sm:h-16",
     },
     {
       id: "logo-6",
       description: "Client 6",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1759537067/ChatGPT_Image_Oct_3_2025_07_17_33_PM_uf1fo1.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280444/MELDENNE_S_7_zh3hms.png",
       className: "h-12 w-auto sm:h-14",
     },
     {
       id: "logo-7",
       description: "Client 7",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1758916772/ChatGPT_Image_Sep_26_2025_02_57_43_PM_iznzgn.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280443/MELDENNE_S_8_xlnyha.png",
       className: "h-14 w-auto sm:h-16",
     },
     {
       id: "logo-8",
       description: "Client 8",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1759250916/Untitled_design_ycyrom.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280443/MELDENNE_S_9_i9w6i7.png",
       className: "h-14 w-auto sm:h-16",
     },
   ];
@@ -75,21 +75,21 @@ const LogosSections = () => {
         "SkyEdge4K.studio transformed our online presence. Our new custom-coded website loads fast, looks amazing, and ranks higher on Google within weeks.",
       name: "Laura Gómez, Dental Clinic Owner",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1759537067/ChatGPT_Image_Oct_3_2025_07_17_33_PM_uf1fo1.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280453/ChatGPT_Image_Oct_3_2025_07_17_33_PM_ezkfg1.png",
     },
     {
       quote:
         "We stopped paying monthly fees for WordPress and Shopify. Now we own a fully coded website that converts better and costs less over time.",
       name: "Carlos Rivera, Founder of MELDENNE'S",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701462/MELDENNE_S_9_z3ppv7.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280443/MELDENNE_S_9_i9w6i7.png",
     },
     {
       quote:
         "Their SEO strategy and Google Ads campaign brought us real leads. We saw a 200% increase in client inquiries in the first month.",
       name: "Sofía Morales, Director of Clean It",
       image:
-        "https://res.cloudinary.com/dqksqtluq/image/upload/v1759701464/MELDENNE_S_6_mvzc0q.png",
+        "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280444/MELDENNE_S_6_rhgeun.png",
     },
   ];
 
