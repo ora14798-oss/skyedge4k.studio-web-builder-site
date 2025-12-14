@@ -21,8 +21,8 @@ export default function TermsOfServicePage() {
 
         <p className="text-gray-400 mb-4">
           Welcome to <strong>SkyEdge4K.Studio</strong>. By accessing or using
-          our website and services, you agree to comply with the following
-          terms and conditions.
+          our website and services, you agree to comply with the following terms
+          and conditions.
         </p>
 
         <h2 className="text-xl font-semibold text-white mt-6 mb-2">

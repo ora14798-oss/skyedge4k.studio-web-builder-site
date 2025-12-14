@@ -1,13 +1,16 @@
 "use client";
 
-import {Menu} from "lucide-react";
+import { Menu } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import type React from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -21,9 +24,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Image from "next/image";
-import React from "react";
-import Link from "next/link";
 
 interface MenuItem {
   title: string;
@@ -61,15 +61,15 @@ const Navbar = ({
     title: "SkyEdge4K.Studio",
   },
   menu = [
-    {title: "Home", url: "#"},
-    {title: "What We Do", url: "#whatwedo"},
-    {title: "Reviews", url: "#reviews"},
-    {title: "Contact Us", url: "#contact"},
-    {title: "Pricing", url: "#pricing"},
+    { title: "Home", url: "#" },
+    { title: "What We Do", url: "#whatwedo" },
+    { title: "Reviews", url: "#reviews" },
+    { title: "Contact Us", url: "#contact" },
+    { title: "Pricing", url: "#pricing" },
   ],
   auth = {
-    contact: {title: "Chat on WhatsApp", url: "https://wa.me/573001614490"},
-    quote: {title: "Get a Free Quote", url: "#contact"},
+    contact: { title: "Chat on WhatsApp", url: "https://wa.me/573001614490" },
+    quote: { title: "Get a Free Quote", url: "#contact" },
   },
 }: Navbar1Props) => {
   return (
@@ -239,4 +239,4 @@ const Navbar = ({
   );
 };
 
-export {Navbar};
+export { Navbar };

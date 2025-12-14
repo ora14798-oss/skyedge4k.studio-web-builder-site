@@ -1,5 +1,5 @@
 // lib/i18n/seo.tsx
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import config from "@/config";
 
 interface TwitterMeta {
@@ -30,7 +30,8 @@ export const getSEOTags = ({
   extraTags,
 }: SEOTagsProps): Metadata => {
   return {
-    title: title || "SkyEdge 4K | Web Design, SEO & Marketing Agency in Cartagena",
+    title:
+      title || "SkyEdge 4K | Web Design, SEO & Marketing Agency in Cartagena",
     description:
       description ||
       "SkyEdge 4K is a professional web design and digital marketing agency based in Cartagena, Colombia. We build high-performance websites, manage SEO, Google Ads, and social media strategies that grow your business.",
@@ -53,7 +54,7 @@ export const getSEOTags = ({
     metadataBase: new URL(
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/"
-        : "https://skyedge4k.com/"
+        : "https://skyedge4k.com/",
     ),
 
     openGraph: {
@@ -81,9 +82,7 @@ export const getSEOTags = ({
 
     twitter: {
       title:
-        twitter?.title ||
-        title ||
-        "SkyEdge 4K | Web Design & Marketing Agency",
+        twitter?.title || title || "SkyEdge 4K | Web Design & Marketing Agency",
       description:
         twitter?.description ||
         description ||
@@ -136,7 +135,7 @@ export const SchemaMarkup = () => {
           },
           geo: {
             "@type": "GeoCoordinates",
-            latitude: 10.3910,
+            latitude: 10.391,
             longitude: -75.4794,
           },
           image: "https://skyedge4k.com/og-image.jpg",

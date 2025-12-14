@@ -1,8 +1,15 @@
 "use client";
 
+import {
+  ArrowRight,
+  CheckCircle,
+  Shield,
+  Smartphone,
+  TrendingUp,
+  Users,
+} from "lucide-react";
+import { type MotionProps, motion } from "motion/react";
 import { cn } from "@/lib/utils";
-import { motion, MotionProps } from "motion/react";
-import { ArrowRight, Shield, TrendingUp, Smartphone, Users, CheckCircle } from "lucide-react";
 
 interface LineShadowTextProps
   extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,
@@ -56,9 +63,24 @@ export default function FinanceAppLanding() {
               <span className="text-xl font-bold text-white">FinanceFlow</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-slate-300 hover:text-white transition-colors">Features</a>
-              <a href="#pricing" className="text-slate-300 hover:text-white transition-colors">Pricing</a>
-              <a href="#about" className="text-slate-300 hover:text-white transition-colors">About</a>
+              <a
+                href="#features"
+                className="text-slate-300 hover:text-white transition-colors"
+              >
+                Features
+              </a>
+              <a
+                href="#pricing"
+                className="text-slate-300 hover:text-white transition-colors"
+              >
+                Pricing
+              </a>
+              <a
+                href="#about"
+                className="text-slate-300 hover:text-white transition-colors"
+              >
+                About
+              </a>
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
                 Get Started
               </button>
@@ -88,8 +110,8 @@ export default function FinanceAppLanding() {
               </LineShadowText>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your relationship with money through intelligent budgeting, 
-              smart investments, and personalized financial insights.
+              Transform your relationship with money through intelligent
+              budgeting, smart investments, and personalized financial insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold flex items-center justify-center transition-colors">
@@ -109,12 +131,16 @@ export default function FinanceAppLanding() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Everything You Need to{" "}
-              <LineShadowText shadowColor="#10b981" className="text-emerald-400">
+              <LineShadowText
+                shadowColor="#10b981"
+                className="text-emerald-400"
+              >
                 Succeed Financially
               </LineShadowText>
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Comprehensive tools and insights to help you budget, save, invest, and grow your wealth.
+              Comprehensive tools and insights to help you budget, save, invest,
+              and grow your wealth.
             </p>
           </div>
 
@@ -126,9 +152,12 @@ export default function FinanceAppLanding() {
               transition={{ delay: 0.1 }}
             >
               <Shield className="h-12 w-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Bank-Level Security</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                Bank-Level Security
+              </h3>
               <p className="text-slate-300">
-                Your financial data is protected with enterprise-grade encryption and security protocols.
+                Your financial data is protected with enterprise-grade
+                encryption and security protocols.
               </p>
             </motion.div>
 
@@ -139,9 +168,12 @@ export default function FinanceAppLanding() {
               transition={{ delay: 0.2 }}
             >
               <TrendingUp className="h-12 w-12 text-emerald-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Smart Investment Tracking</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                Smart Investment Tracking
+              </h3>
               <p className="text-slate-300">
-                Monitor your portfolio performance with real-time data and intelligent analytics.
+                Monitor your portfolio performance with real-time data and
+                intelligent analytics.
               </p>
             </motion.div>
 
@@ -152,9 +184,12 @@ export default function FinanceAppLanding() {
               transition={{ delay: 0.3 }}
             >
               <Smartphone className="h-12 w-12 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Mobile-First Design</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                Mobile-First Design
+              </h3>
               <p className="text-slate-300">
-                Manage your finances on the go with our intuitive mobile app and responsive design.
+                Manage your finances on the go with our intuitive mobile app and
+                responsive design.
               </p>
             </motion.div>
           </div>
@@ -162,7 +197,10 @@ export default function FinanceAppLanding() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section
+        id="pricing"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -171,7 +209,9 @@ export default function FinanceAppLanding() {
                 Transparent Pricing
               </LineShadowText>
             </h2>
-            <p className="text-xl text-slate-300">Choose the plan that fits your financial goals</p>
+            <p className="text-xl text-slate-300">
+              Choose the plan that fits your financial goals
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -202,7 +242,9 @@ export default function FinanceAppLanding() {
                 Most Popular
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Pro</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-4">$9.99<span className="text-lg text-slate-400">/mo</span></div>
+              <div className="text-4xl font-bold text-blue-400 mb-4">
+                $9.99<span className="text-lg text-slate-400">/mo</span>
+              </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-emerald-400 mr-3" />
@@ -228,7 +270,9 @@ export default function FinanceAppLanding() {
 
             <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700">
               <h3 className="text-2xl font-bold text-white mb-2">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-4">$29.99<span className="text-lg text-slate-400">/mo</span></div>
+              <div className="text-4xl font-bold text-blue-400 mb-4">
+                $29.99<span className="text-lg text-slate-400">/mo</span>
+              </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-emerald-400 mr-3" />
@@ -265,11 +309,14 @@ export default function FinanceAppLanding() {
             </LineShadowText>
           </h2>
           <p className="text-xl text-slate-300 mb-8">
-            Join thousands of users who have already taken control of their finances with FinanceFlow.
+            Join thousands of users who have already taken control of their
+            finances with FinanceFlow.
           </p>
           <div className="flex items-center justify-center space-x-4 mb-8">
             <Users className="h-6 w-6 text-blue-400" />
-            <span className="text-slate-300">Over 50,000 satisfied customers</span>
+            <span className="text-slate-300">
+              Over 50,000 satisfied customers
+            </span>
           </div>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 rounded-lg text-xl font-semibold transition-colors">
             Start Your Free Trial Today
@@ -283,16 +330,35 @@ export default function FinanceAppLanding() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <TrendingUp className="h-6 w-6 text-blue-400" />
-              <span className="text-lg font-semibold text-white">FinanceFlow</span>
+              <span className="text-lg font-semibold text-white">
+                FinanceFlow
+              </span>
             </div>
             <div className="flex space-x-8">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy</a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">Terms</a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">Support</a>
+              <a
+                href="#"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
+                Privacy
+              </a>
+              <a
+                href="#"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
+                Terms
+              </a>
+              <a
+                href="#"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
+                Support
+              </a>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-slate-800 text-center">
-            <p className="text-slate-400">© 2024 FinanceFlow. All rights reserved.</p>
+            <p className="text-slate-400">
+              © 2024 FinanceFlow. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>

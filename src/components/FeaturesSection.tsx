@@ -1,10 +1,8 @@
 import { CircleHelp, Eye, Lightbulb, Volume2 } from "lucide-react";
 import React from "react";
-
-import { cn } from "@/lib/utils";
-
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
 
 const DATA = [
   {
@@ -49,7 +47,8 @@ const FeaturesSection = () => {
             Everything you need to succeed
           </h2>
           <p className="text-muted-foreground max-w-[600px] tracking-[-0.32px]">
-            Powerful tools designed to help your business grow faster and smarter.
+            Powerful tools designed to help your business grow faster and
+            smarter.
           </p>
         </div>
       </div>

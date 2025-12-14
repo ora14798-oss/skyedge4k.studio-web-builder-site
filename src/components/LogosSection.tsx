@@ -1,13 +1,13 @@
 "use client";
 
 import AutoScroll from "embla-carousel-auto-scroll";
-import { cn } from "@/lib/utils";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 const LogosSections = () => {
   const logos = [
@@ -148,7 +148,7 @@ const LogosSections = () => {
                 <div
                   className={cn(
                     "relative border-border w-full border-r px-6 sm:px-8 text-center sm:text-left",
-                    index == 0 && "lg:border-l"
+                    index == 0 && "lg:border-l",
                   )}
                 >
                   <h5 className="text-muted-foreground mb-8 sm:mb-14 mt-5 text-base sm:text-lg tracking-tight">

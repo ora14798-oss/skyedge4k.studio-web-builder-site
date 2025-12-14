@@ -1,10 +1,10 @@
 import {
+  Code2,
   Facebook,
+  Globe,
   Instagram,
   Linkedin,
   MessageCircle,
-  Globe,
-  Code2,
   Rocket,
   Twitter,
 } from "lucide-react";
@@ -23,7 +23,7 @@ const FooterSection = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl font-bold tracking-tight">
-                SkyEdge4K.studio
+                  SkyEdge4K.studio
                 </span>
               </div>
               <p className="text-gray-400 leading-relaxed">
@@ -37,11 +37,31 @@ const FooterSection = () => {
             <div>
               <h4 className="font-semibold mb-4 text-lg">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition">Web Development</a></li>
-                <li><a href="#" className="hover:text-white transition">SEO Optimization</a></li>
-                <li><a href="#" className="hover:text-white transition">Google & Social Ads</a></li>
-                <li><a href="#" className="hover:text-white transition">Marketing Strategy</a></li>
-                <li><a href="#" className="hover:text-white transition">3D Virtual Tours</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Web Development
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    SEO Optimization
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Google & Social Ads
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Marketing Strategy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    3D Virtual Tours
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -49,11 +69,31 @@ const FooterSection = () => {
             <div>
               <h4 className="font-semibold mb-4 text-lg">Company</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition">Home</a></li>
-                <li><a href="#whatwedo" className="hover:text-white transition">What we do</a></li>
-                <li><a href="#reviews" className="hover:text-white transition">Review</a></li>
-                <li><a href="#pricing" className="hover:text-white transition">Pricing</a></li>
-                <li><a href="#contact" className="hover:text-white transition">Contact us</a></li>
+                <li>
+                  <a href="#" className="hover:text-white transition">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#whatwedo" className="hover:text-white transition">
+                    What we do
+                  </a>
+                </li>
+                <li>
+                  <a href="#reviews" className="hover:text-white transition">
+                    Review
+                  </a>
+                </li>
+                <li>
+                  <a href="#pricing" className="hover:text-white transition">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-white transition">
+                    Contact us
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -61,9 +101,24 @@ const FooterSection = () => {
             <div>
               <h4 className="font-semibold mb-4 text-lg">Legal</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a></li>
-                <li><a href="/terms" className="hover:text-white transition">Terms of Service</a></li>
-                <li><a href="/cookies" className="hover:text-white transition">Cookie Policy</a></li>
+                <li>
+                  <a
+                    href="/privacy-policy"
+                    className="hover:text-white transition"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms" className="hover:text-white transition">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="/cookies" className="hover:text-white transition">
+                    Cookie Policy
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -71,20 +126,63 @@ const FooterSection = () => {
             <div>
               <h4 className="font-semibold mb-4 text-lg">Connect With Us</h4>
               <p className="text-gray-400 mb-4">
-                Anaheim California, USA 
+                Anaheim California, USA
                 <br />
-                 <a href="tel:+16574528646" className="hover:text-white transition font-semibold">+1 (657) 452-8646</a>
-                <br />  
-                <a href="mailto:skyedge4k@gmail.com" className="hover:text-white transition">
+                <a
+                  href="tel:+16574528646"
+                  className="hover:text-white transition font-semibold"
+                >
+                  +1 (657) 452-8646
+                </a>
+                <br />
+                <a
+                  href="mailto:skyedge4k@gmail.com"
+                  className="hover:text-white transition"
+                >
                   skyedge4k@gmail.com
                 </a>
               </p>
               <div className="flex items-center gap-4">
-                <a href="https://www.facebook.com/people/SkyEdge4KStudio/61578244506155/#" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition"><Facebook size={22} /></a>
-                <a href="https://www.instagram.com/skyedge4k.studio" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition"><Instagram size={22} /></a>
-                <a href="https://x.com/skyedge4k" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition"><Twitter size={22} /></a>
-                <a href="https://www.tiktok.com/@skyedge4k.studio" target="_blank" rel="noopener noreferrer" className="hover:text-white transition"><Globe size={22} /></a>
-                <a href="https://wa.me/573001614490" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition"><MessageCircle size={22} /></a>
+                <a
+                  href="https://www.facebook.com/people/SkyEdge4KStudio/61578244506155/#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition"
+                >
+                  <Facebook size={22} />
+                </a>
+                <a
+                  href="https://www.instagram.com/skyedge4k.studio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-pink-400 transition"
+                >
+                  <Instagram size={22} />
+                </a>
+                <a
+                  href="https://x.com/skyedge4k"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-sky-400 transition"
+                >
+                  <Twitter size={22} />
+                </a>
+                <a
+                  href="https://www.tiktok.com/@skyedge4k.studio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition"
+                >
+                  <Globe size={22} />
+                </a>
+                <a
+                  href="https://wa.me/573001614490"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-green-400 transition"
+                >
+                  <MessageCircle size={22} />
+                </a>
               </div>
             </div>
           </div>

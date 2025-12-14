@@ -199,7 +199,7 @@ const MainFeatureSection = () => {
           </div>
         </div>
       </div>
-       {/* ⭐ NEW FEATURED VIDEO SECTION */}
+      {/* ⭐ NEW FEATURED VIDEO SECTION */}
       <div className="w-full bg-black py-24 px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -255,8 +255,6 @@ const MainFeatureSection = () => {
           </div>
         </div>
       </div>
-
-     
 
       {/* CTA Section */}
       <div className="relative bg-primary py-16 sm:py-24 overflow-hidden">

@@ -1,8 +1,8 @@
 "use client";
 
 import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export function PricingSection() {
   const handleScrollToContact = () => {
@@ -45,7 +45,7 @@ export function PricingSection() {
       features: [
         "Campaign Setup – $230 USD",
         "Monthly Management – $460 USD",
-        "Google Ads – From $600 USD",    
+        "Google Ads – From $600 USD",
         "Targeting, creatives & optimization",
         "Platforms: Meta, Instagram, Google. ",
       ],
@@ -62,7 +62,8 @@ export function PricingSection() {
             Choose the Perfect Plan for You
           </h2>
           <p className="mt-6 font-medium text-muted-foreground">
-            Clear pricing for web development, SEO, and paid ad campaigns — select what fits your business goals.
+            Clear pricing for web development, SEO, and paid ad campaigns —
+            select what fits your business goals.
           </p>
         </div>
 

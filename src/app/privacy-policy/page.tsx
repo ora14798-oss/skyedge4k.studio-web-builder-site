@@ -31,9 +31,9 @@ export default function PrivacyPolicyPage() {
           1. Information We Collect
         </h2>
         <p className="text-gray-400 mb-4">
-          We may collect your name, email, phone number, and company details when
-          you contact us or use our services. Additionally, analytics tools like
-          Google Analytics may collect non-identifiable data to improve our
+          We may collect your name, email, phone number, and company details
+          when you contact us or use our services. Additionally, analytics tools
+          like Google Analytics may collect non-identifiable data to improve our
           website and user experience.
         </p>
 

@@ -1,4 +1,4 @@
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 const CTASection = () => {
   return (
@@ -44,4 +44,4 @@ const CTASection = () => {
   );
 };
 
-export {CTASection};
+export { CTASection };

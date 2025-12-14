@@ -1,10 +1,10 @@
 "use client";
 
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
-import {cn} from "@/lib/utils";
-import {Avatar, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Card} from "@/components/ui/card";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -89,7 +89,7 @@ const TestimonialSection = () => {
 
         <div className="relative mt-14 w-full after:absolute after:inset-x-0 after:-bottom-2 after:h-96 after:bg-linear-to-t after:from-background">
           <ResponsiveMasonry
-            columnsCountBreakPoints={{350: 1, 768: 2, 1024: 3}}
+            columnsCountBreakPoints={{ 350: 1, 768: 2, 1024: 3 }}
           >
             <Masonry gutter="20px" columnsCount={3}>
               {testimonials.map((testimonial, idx) => {
@@ -99,7 +99,7 @@ const TestimonialSection = () => {
                     className={cn(
                       "p-5 shadow-md rounded-2xl w-full",
                       idx > 3 && idx <= 5 && "hidden md:block",
-                      idx > 5 && "hidden lg:block"
+                      idx > 5 && "hidden lg:block",
                     )}
                   >
                     <div className="flex gap-4 leading-5">
@@ -131,4 +131,4 @@ const TestimonialSection = () => {
   );
 };
 
-export {TestimonialSection};
+export { TestimonialSection };

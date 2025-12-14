@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import ContactForm from "./contact-form";
 
 export function CTASectionForm() {
@@ -45,13 +45,13 @@ export function CTASectionForm() {
             </h2>
 
             <p className="text-lg text-white/90 mb-6">
-              At <strong className="text-blue-600">SkyEdge4K</strong>, we design and
-              develop stunning, fast, and SEO-optimized websites that not only
-              look amazing they{" "}
-              <em className="text-white">convert visitors into real clients</em>.
-              Whether you need a corporate site, landing page, or e-commerce
-              store, our web team in Colombia and in the USA crafts digital experiences that
-              elevate your brand and grow your sales.
+              At <strong className="text-blue-600">SkyEdge4K</strong>, we design
+              and develop stunning, fast, and SEO-optimized websites that not
+              only look amazing they{" "}
+              <em className="text-white">convert visitors into real clients</em>
+              . Whether you need a corporate site, landing page, or e-commerce
+              store, our web team in Colombia and in the USA crafts digital
+              experiences that elevate your brand and grow your sales.
             </p>
 
             <ul className="space-y-3 mb-6 text-white/90">
@@ -103,18 +103,18 @@ export function CTASectionForm() {
                   rel="noopener noreferrer"
                   className="hover:underline transition-transform duration-300 ease-in-out hover:scale-105 font-semibold"
                 >
-                 Our number in Colombia: +57 300 161 4490
+                  Our number in Colombia: +57 300 161 4490
                 </a>
               </p>
               <p className="flex items-center gap-2">
-    <Phone className="w-4 h-4" />
-    <a
-      href="tel:+16574528646"
-      className="hover:underline transition-transform duration-300 ease-in-out hover:scale-105 font-semibold"
-    >
-      Our number in the USA: +1 (657) 452-8646
-    </a>
-  </p>
+                <Phone className="w-4 h-4" />
+                <a
+                  href="tel:+16574528646"
+                  className="hover:underline transition-transform duration-300 ease-in-out hover:scale-105 font-semibold"
+                >
+                  Our number in the USA: +1 (657) 452-8646
+                </a>
+              </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 <a

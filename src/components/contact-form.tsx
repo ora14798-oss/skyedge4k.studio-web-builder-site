@@ -1,8 +1,8 @@
 "use client";
 
-import {useRef, useState} from "react";
-import {Button} from "@/components/ui/button";
 import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -20,7 +20,7 @@ export default function ContactForm() {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         formRef.current!,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
       );
 
       setSubmitted(true);
@@ -29,9 +29,6 @@ export default function ContactForm() {
       }
     } catch (error) {
       setError("Failed to send message. Please try again later.");
-      {
-        /* "Failed to send message. Please try again later." */
-      }
       console.error("EmailJS error:", error);
     } finally {
       setIsSubmitting(false);

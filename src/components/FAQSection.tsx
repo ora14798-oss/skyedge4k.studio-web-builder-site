@@ -1,5 +1,10 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
   {
@@ -40,18 +45,24 @@ export const FaqSection = () => {
       <div className="w-full max-w-3xl mx-auto px-4">
         <div className="text-center mb-12">
           <Badge className="text-xs font-medium">FAQ</Badge>
-          <h2 className="mt-4 text-3xl font-semibold">Frequently Asked Questions</h2>
+          <h2 className="mt-4 text-3xl font-semibold">
+            Frequently Asked Questions
+          </h2>
           <p className="mt-6 font-medium text-muted-foreground">
-            Have questions about SkyEdge4K.studio? Here are the most common answers about our web development,
-            SEO, and Google Ads services.
+            Have questions about SkyEdge4K.studio? Here are the most common
+            answers about our web development, SEO, and Google Ads services.
           </p>
         </div>
 
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
+              <AccordionTrigger className="text-left">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                {faq.answer}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
