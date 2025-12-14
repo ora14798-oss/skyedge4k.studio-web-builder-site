@@ -56,7 +56,7 @@ interface Navbar1Props {
 const Navbar = ({
   logo = {
     url: "/",
-    src: "https://res.cloudinary.com/dqksqtluq/image/upload/v1755977107/Flat_Vector_Logo_for_Design_Studio_shkzhc.png",
+    src: "https://res.cloudinary.com/dtza2wtax/image/upload/v1765670347/Dise%C3%B1o_sin_t%C3%ADtulo_fwcjkw.png",
     alt: "SkyEdge 4K Web Development",
     title: "SkyEdge4K.Studio",
   },
