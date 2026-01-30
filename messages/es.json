@@ -1,0 +1,283 @@
+{
+  "Navbar": {
+    "home": "Inicio",
+    "whatwedo": "Qué Hacemos",
+    "reviews": "Reseñas",
+    "contact": "Contáctanos",
+    "pricing": "Precios",
+    "whatsapp": "Chat por WhatsApp",
+    "quote": "Cotización Gratis"
+  },
+  "Hero": {
+    "badge": "Agencia Profesional de Diseño Web y SEO",
+    "titlePart1": "Diseñamos y construimos",
+    "titleHighlight": "sitios web",
+    "description": "crea sitios web de alto rendimiento con estrategias integradas de SEO y Google Ads que atraen clientes reales e impulsan un crecimiento medible para su negocio.",
+    "btnProject": "Inicia tu Proyecto Web",
+    "btnCall": "Agenda una Llamada Estratégica"
+  },
+  "MainFeature": {
+    "marquee": {
+      "item1": "Desarrollo Web con Código Real | Sin Tarifas Mensuales de Plataforma",
+      "item2": "Sitios Web Personalizados que Cargan Rápido y Posicionan Mejor",
+      "item3": "Estrategias SEO Construidas desde el Código",
+      "item4": "Campañas de Google Ads Enfocadas en Crecimiento Medible",
+      "item5": "Diseño Web Profesional para Negocios que Buscan Resultados",
+      "item6": "Sin WordPress ni Shopify | Soluciones 100% Personalizadas",
+      "item7": "Paga una Vez | Sé Dueño de tu Sitio Web por Siempre",
+      "item8": "Rendimiento, Seguridad y SEO en cada Línea de Código",
+      "item9": "Aumenta la Visibilidad y Atrae Clientes Reales",
+      "item10": "Google Ads Inteligentes que Convierten Visitantes en Leads",
+      "item11": "Sitios Web Codificados para Velocidad, Precisión y Escalabilidad",
+      "item12": "SkyEdge4K.Studio | Construyendo Éxito Digital con Código"
+    },
+    "features": {
+      "title": "¿QUÉ HACEMOS MEJOR?",
+      "description": "SkyEdge4K.Studio construye sitios web y sistemas de marketing que atraen clientes reales, no solo clics. Combinamos programación profesional, estrategia SEO y gestión de Google Ads para que su negocio destaque y crezca eficientemente.",
+      "dev": {
+        "title": "Desarrollo Web a la Medida",
+        "desc": "Diseñamos y construimos sitios usando código real para total libertad y máximo rendimiento. Sin WordPress ni Shopify, solo sitios personalizados, escalables y veloces."
+      },
+      "seo": {
+        "title": "Optimización SEO",
+        "desc": "Optimizamos su sitio web desde su estructura principal para mejorar la visibilidad y el ranking en Google."
+      },
+      "ads": {
+        "title": "Campañas de Google Ads",
+        "desc": "Campañas inteligentes enfocadas en el retorno de inversión (ROI) diseñadas para convertir."
+      }
+    },
+    "video": {
+      "title": "Proyecto Destacado",
+      "desc": "Una muestra de nuestro desarrollo web, UI/UX y dirección creativa diseñada para el rendimiento y el impacto visual."
+    },
+    "portfolio": {
+      "show": "Ver ejemplos de diseño web",
+      "hide": "Ocultar portafolio"
+    },
+    "cta": {
+      "title": "¿LISTO PARA CRECER TU NEGOCIO ONLINE?",
+      "description": "Asóciate con SkyEdge4K.Studio para obtener un sitio web totalmente codificado, SEO optimizado y campañas de Google Ads enfocadas en resultados.",
+      "button": "Inicia tu Proyecto"
+    }
+  },
+  "LogosSections": {
+    "title": "ÚNETE A NUESTROS CLIENTES SATISFECHOS",
+    "testimonials": {
+      "laura": {
+        "quote": "Skyedge Studio transformó nuestra presencia en línea. Nuestro nuevo sitio web a medida carga rápido, se ve increíble y subió en el ranking de Google en semanas.",
+        "name": "Laura Gómez, Dueña de Clínica Dental"
+      },
+      "carlos": {
+        "quote": "Dejamos de pagar mensualidades en WordPress y Shopify. Ahora somos dueños de un sitio web codificado que convierte mejor y cuesta menos con el tiempo.",
+        "name": "Carlos Rivera, Fundador de MELDENNE'S"
+      },
+      "sofia": {
+        "quote": "Su estrategia de SEO y campaña de Google Ads nos trajo clientes reales. Vimos un aumento del 200% en consultas de clientes en el primer mes.",
+        "name": "Sofía Morales, Directora de Clean It"
+      }
+    }
+  },
+  "CTASection": {
+  "title": "¡Construyamos un sitio web que trabaje tan duro como tú!",
+  "description": "SkyEdge4K.Studio crea sitios web totalmente codificados y de alto rendimiento, optimizados para SEO, velocidad y conversiones. Sin plantillas. Solo resultados.",
+  "button": "Obtenga su Consulta Gratuita"
+},
+"Testimonials": {
+  "badge": "Opiniones de Clientes",
+  "title": "Lo que nuestros clientes dicen de SkyEdge4K.Studio",
+  "subtitle": "Negocios reales. Crecimiento real. Resultados reales.",
+  "items": [
+    {
+      "name": "Laura Gómez",
+      "role": "CEO, Café del Sol",
+      "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279802/cld-sample.jpg",
+      "content": "SkyEdge construyó nuestro sitio web a medida y desde cero. Muy buen trabajo y a los clientes les encantó la página. Gracias!"
+    },
+    {
+      "name": "Carlos Rivera",
+      "role": "Fundador, UrbanStore",
+      "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279797/samples/man-portrait.jpg",
+      "content": "Dejamos de pagar mensualidades en Shopify! Lo mejor! Realmente SkyEdge Studio creó nuestro sitio de e-commerce codificado que nos pertenece totalmente, es mucho más rápido y rentable para el bolsillo"
+    },
+    {
+      "name": "Sofía Morales",
+      "role": "Directora de Marketing, Evolve Agency",
+      "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279796/samples/outdoor-woman.jpg",
+      "content": "¡Las campañas de temporada nos trajeron muy buenos resultados y retornos increíbles! Duplicamos nuestras ventas desde la primera campaña, excelente equipo!"
+    },
+    {
+      "name": "Andrés López",
+      "role": "Desarrollador Inmobiliario, NovaHomes",
+      "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279797/samples/man-on-a-street.jpg",
+      "content": "Este equipo creó un sitio dinámico de propiedades con tours 3D y SEO perfecto! Es moderno, responsivo y atrae compradores reales, una locura"
+    },
+    {
+      "name": "Fernanda Torres",
+      "role": "Emprendedora",
+      "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279778/sample.jpg",
+      "content": "Lo que más me gustó es que no usan plataformas, no nos amarramos a pagos y páginas que se congelan. El sitio carga muy bien! Excelente trabajo."
+    },
+    {
+      "name": "Daniel Pérez",
+      "role": "Dueño, FitZone Gym",
+      "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279783/samples/people/smiling-man.jpg",
+      "content": "Mi sitio de fitness se ve profesional y totalmente responsivo. SkyEdge4K Studio maneja nuestro SEO y anuncios con precisión, ¡los resultados hablan por sí mismos!"
+    },
+    {
+      "name": "Camila Ríos",
+      "role": "Consultora de Marketing",
+      "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279785/samples/people/bicycle.jpg",
+      "content": "Este equipo entiende profundamente el branding y el marketing. Mis clientes constantemente elogian los diseños y rendimiento de mis cuentas."
+    },
+    {
+      "name": "Miguel Herrera",
+      "role": "Fotógrafo",
+      "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279796/samples/look-up.jpg",
+      "content": "Finalmente, un estudio que construye sitios web de verdad. Mi portafolio ahora es veloz y destaca! Y lo mejor, fácil de actualizar. Gracias equipo!"
+    }
+  ]
+},
+"CTASectionForm": {
+  "title": "¿Listo para impulsar su negocio con un sitio web de alto rendimiento?",
+  "description": "En <strong>SkyEdge4K</strong>, diseñamos y desarrollamos sitios web impactantes, rápidos y optimizados para SEO que no solo se ven increíbles, sino que <em>convierten visitantes en clientes reales</em>. Ya sea que necesite un sitio corporativo, landing page o tienda online, nuestro equipo crea experiencias digitales que elevan su marca.",
+  "bullets": [
+    "Sitios responsivos modernos que se ven perfectos en cualquier dispositivo",
+    "Páginas de carga rápida y SEO optimizadas para Google",
+    "Diseño enfocado en conversión para convertir tráfico en ventas",
+    "Desarrollo a la medida para empresas, e-commerce y landing pages",
+    "Soporte total desde el concepto hasta el lanzamiento y más allá"
+  ],
+  "closing": "Su sitio web es la primera impresión de su marca. Hagámosla inolvidable.",
+  "phoneCol": "Nuestro WhatsApp",
+  "phoneUSA": "Nuestro número en USA"
+},
+"ContactForm": {
+  "title": "Contáctanos",
+  "successTitle": "¡Gracias!",
+  "successMessage": "Su mensaje ha sido enviado con éxito.",
+  "successSub": "Nos pondremos en contacto con usted pronto.",
+  "error": "Error al enviar el mensaje. Por favor intente más tarde.",
+  "sending": "Enviando...",
+  "submit": "Enviar Solicitud",
+  "labels": {
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "message": "Detalles del Proyecto"
+  },
+  "placeholders": {
+    "name": "Ingrese su nombre",
+    "email": "Ingrese su correo",
+    "phone": "Ingrese su número de teléfono",
+    "message": "Cuéntenos sobre su proyecto..."
+  }
+},
+"FaqSection": {
+  "badge": "FAQ",
+  "title": "Preguntas Frecuentes",
+  "description": "¿Tiene preguntas sobre SkyEdge4K.Studio? Aquí están las respuestas más comunes sobre nuestro desarrollo web, SEO y servicios de Google Ads.",
+  "items": [
+    {
+      "question": "¿Utilizan plataformas como WordPress o Wix?",
+      "answer": "No. En SkyEdge4K.studio construimos cada sitio usando código real (Next.js, React y Tailwind). Esto significa tiempos de carga más rápidos, mejor SEO, sin limitaciones de plataforma y propiedad total de su sitio sin mensualidades ni plantillas."
+    },
+    {
+      "question": "¿Pueden ayudar a mi negocio a aparecer en Google?",
+      "answer": "¡Sí! Cada sitio que construimos está optimizado para SEO desde el código — incluyendo estructura, velocidad y metadatos. También ofrecemos gestión continua de SEO y Google Ads para ayudar a su negocio a posicionarse mejor."
+    },
+    {
+      "question": "¿Qué hace que sus sitios web sean más rápidos que otros?",
+      "answer": "Nuestros sitios están codificados sin plugins innecesarios ni temas pesados. Optimizamos imágenes, usamos renderizado del lado del servidor y seguimos las mejores prácticas para lograr un rendimiento ultrarrápido y puntajes máximos en Google PageSpeed."
+    },
+    {
+      "question": "¿Debo pagar una mensualidad después de terminar el sitio?",
+      "answer": "¡Sin tarifas mensuales de plataforma! Usted paga una vez por el desarrollo y es dueño de su sitio por siempre. Podemos brindar mantenimiento opcional, pero la propiedad sigue siendo 100% suya."
+    },
+    {
+      "question": "¿También pueden gestionar mis campañas de Google Ads?",
+      "answer": "Absolutamente. Nos especializamos en campañas de Google Ads de alto rendimiento integradas con la analítica de su sitio. Enfocamos el presupuesto en entregar un retorno de inversión (ROI) medible, no solo clics."
+    },
+    {
+      "question": "¿Cuánto tiempo toma construir un sitio web?",
+      "answer": "Depende de la complejidad, pero la mayoría de los sitios toman entre 2 y 5 semanas. Durante este tiempo, diseñamos, desarrollamos, optimizamos y probamos todo para que su sitio se lance perfecto y listo para rendir."
+    }
+  ]
+},
+"Footer": {
+  "brandDescription": "Construimos sitios web de alto rendimiento y visualmente impactantes diseñados para atraer y convertir. SEO y estrategia que llevan su marca al siguiente nivel.",
+  "allRights": "Todos los derechos reservados.",
+  "builtWith": "Construido con estrategia, diseño y código real ⚡",
+  "services": {
+    "title": "Servicios",
+    "dev": "Desarrollo Web",
+    "seo": "Optimización SEO",
+    "ads": "Google & Social Ads",
+    "strategy": "Estrategia de Marketing",
+    "tours": "Recorridos Virtuales 3D"
+  },
+  "company": {
+    "title": "Compañía",
+    "home": "Inicio",
+    "about": "Qué hacemos",
+    "reviews": "Reseñas",
+    "pricing": "Precios",
+    "contact": "Contáctanos"
+  },
+  "legal": {
+    "title": "Legal",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "cookies": "Política de Cookies"
+  }
+},
+  "Pricing": {
+    "badge": "Precios",
+    "title": "Invierta en Excelencia Digital",
+    "subtitle": "Soluciones personalizadas premium para empresas que buscan competir globalmente. Sin mensualidades. Sin plantillas. Solo rendimiento.",
+    "startingPrice": "Precio Inicial",
+    "plans": {
+      "landing": {
+        "name": "Landing Page",
+        "price": "Desde $18,750 MXN",
+        "description": "Página única de alta conversión diseñada para la generación máxima de prospectos.",
+        "features": [
+          "Código 100% Personalizado (React/Next.js)",
+          "UI/UX Optimizado para Conversión",
+          "Rendimiento Ultra Rápido",
+          "Implementación Básica de SEO",
+          "Configuración de Analítica y Rastreo"
+        ],
+        "button": "Comenzar"
+      },
+      "professional": {
+        "name": "Sitio Web Profesional",
+        "price": "Desde $37,500 MXN",
+        "description": "Presencia corporativa completa para empresas establecidas.",
+        "features": [
+          "Hasta 6 Páginas Diseñadas a Medida",
+          "Estrategia de SEO Avanzada",
+          "Animaciones y Movimiento Premium",
+          "Integración de CMS (Edite su Contenido)",
+          "Arquitectura Priorizada en Velocidad",
+          "Listo para Soporte Multilingüe"
+        ],
+        "button": "Construir mi Marca"
+      },
+      "store": {
+        "name": "Tienda en Línea",
+        "price": "Desde $57,000 MXN",
+        "description": "Solución robusta de e-commerce enfocada en ventas y escalabilidad.",
+        "features": [
+          "Experiencia de Compra Personalizada",
+          "Pasarelas de Pago Seguras (Stripe/PayPal)",
+          "Gestión Avanzada de Productos",
+          "Notificaciones de Venta Automáticas",
+          "Integración de Inventario y Envíos",
+          "Flujo de Pago Optimizado"
+        ],
+        "button": "Empezar a Vender"
+      }
+    }
+  }
+}

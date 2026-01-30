@@ -3,8 +3,10 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
+  const t = useTranslations("ContactForm");
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -28,7 +30,7 @@ export default function ContactForm() {
         formRef.current.reset();
       }
     } catch (error) {
-      setError("Failed to send message. Please try again later.");
+      setError(t("error"));
       console.error("EmailJS error:", error);
     } finally {
       setIsSubmitting(false);
@@ -39,14 +41,13 @@ export default function ContactForm() {
     return (
       <div className="text-center space-y-4 py-8">
         <div className="text-2xl font-semibold text-white mb-2">
-          {/* Thank You! */} {"Thank You!"}
+          {t("successTitle")}
         </div>
         <p className="text-white/80">
-          {/* Your message has been sent successfully. */}{" "}
-          {"Your message has been sent successfully."}
+          {t("successMessage")}
         </p>
         <p className="text-white/80">
-          {/* We'll get back to you soon. */} {"We'll get back to you soon."}
+          {t("successSub")}
         </p>
       </div>
     );
@@ -55,56 +56,56 @@ export default function ContactForm() {
   return (
     <div className="rounded-3xl" id="contact">
       <h3 className="text-xl font-semibold mb-6 text-white">
-        {/* Contact Us */} {"Contact Us"}
+        {t("title")}
       </h3>
       <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium text-white/80 mb-1">
-            {/* Name */} {"Name"}
+            {t("labels.name")}
           </label>
           <input
             type="text"
             name="name"
             required
             className="w-full p-2 rounded-md bg-white/20 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
-            placeholder={"Enter your first name"}
+            placeholder={t("placeholders.name")}
           />
         </div>
 
         <div>
           <label className="block text-sm font-medium text-white/80 mb-1">
-            {/* Email */} {"Email"}
+            {t("labels.email")}
           </label>
           <input
             type="email"
             name="email"
             required
             className="w-full p-2 rounded-md bg-white/20 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
-            placeholder={"Enter your email"}
+            placeholder={t("placeholders.email")}
           />
         </div>
 
         <div>
           <label className="block text-sm font-medium text-white/80 mb-1">
-            {/* Phone */} {"Phone"}
+            {t("labels.phone")}
           </label>
           <input
             type="tel"
             name="phone"
             className="w-full p-2 rounded-md bg-white/20 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
-            placeholder={"Enter your phone number"}
+            placeholder={t("placeholders.phone")}
           />
         </div>
 
         <div>
           <label className="block text-sm font-medium text-white/80 mb-1">
-            {/* Project Details */} {"Project Details"}
+            {t("labels.message")}
           </label>
           <textarea
             name="message"
             required
             className="w-full p-2 rounded-md bg-white/20 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 min-h-[100px]"
-            placeholder={"Tell us about your project..."}
+            placeholder={t("placeholders.message")}
           />
         </div>
 
@@ -113,10 +114,10 @@ export default function ContactForm() {
         <Button
           type="submit"
           variant="secondary"
-          className="w-full"
+          className="w-full font-bold"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Sending..." : "Submit Request"}
+          {isSubmitting ? t("sending") : t("submit")}
         </Button>
       </form>
     </div>

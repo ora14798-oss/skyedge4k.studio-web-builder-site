@@ -3,8 +3,11 @@
 import { Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export function PricingSection() {
+  const t = useTranslations("Pricing");
+
   const handleScrollToContact = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -14,42 +17,25 @@ export function PricingSection() {
 
   const plans = [
     {
-      name: "Web Development",
-      price: "From $795 USD",
-      description: "Landing Page, Full Website and online store development",
-      features: [
-        "Landing Page – $795 USD",
-        "Full Website – $1,000 USD",
-        "Responsive design (mobile + desktop)",
-        "Basic SEO optimization included",
-        "Fast and secure hosting integration",
-      ],
-      buttonText: "Request Quote",
+      name: t("plans.landing.name"),
+      price: t("plans.landing.price"),
+      description: t("plans.landing.description"),
+      features: t.raw("plans.landing.features") as string[],
+      buttonText: t("plans.landing.button"),
     },
     {
-      name: "SEO Packages",
-      price: "From $550 USD",
-      description: "Boost your online visibility and get found on Google",
-      features: [
-        "Website SEO setup and optimization",
-        "On-page and off-page improvements",
-        "Google Search Console integration",
-        "Monthly performance reports",
-      ],
-      buttonText: "Get SEO Plan",
+      name: t("plans.professional.name"),
+      price: t("plans.professional.price"),
+      description: t("plans.professional.description"),
+      features: t.raw("plans.professional.features") as string[],
+      buttonText: t("plans.professional.button"),
     },
     {
-      name: "Paid Ads Campaigns",
-      price: "From $230 USD",
-      description: "Social Media & Google Ads Management",
-      features: [
-        "Campaign Setup – $230 USD",
-        "Monthly Management – $460 USD",
-        "Google Ads – From $600 USD",
-        "Targeting, creatives & optimization",
-        "Platforms: Meta, Instagram, Google. ",
-      ],
-      buttonText: "Start Campaign",
+      name: t("plans.store.name"),
+      price: t("plans.store.price"),
+      description: t("plans.store.description"),
+      features: t.raw("plans.store.features") as string[],
+      buttonText: t("plans.store.button"),
     },
   ];
 
@@ -57,13 +43,12 @@ export function PricingSection() {
     <section id="pricing" className="py-24 w-full bg-secondary/30">
       <div className="w-full max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge className="text-xs font-medium">Pricing</Badge>
+          <Badge className="text-xs font-medium">{t("badge")}</Badge>
           <h2 className="mt-4 text-3xl font-semibold">
-            Choose the Perfect Plan for You
+            {t("title")}
           </h2>
           <p className="mt-6 font-medium text-muted-foreground">
-            Clear pricing for web development, SEO, and paid ad campaigns —
-            select what fits your business goals.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -73,11 +58,10 @@ export function PricingSection() {
               key={index}
               className={`flex flex-col justify-between bg-white rounded-2xl p-8 border shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${
                 index === 1
-                  ? "border-sky-400 ring-1 ring-sky-200 bg-gradient-to-b from-sky-50 to-white"
+                  ? "border-sky-400 ring-1 ring-sky-200 bg-gradient-to-b from-sky-50 to-white scale-105"
                   : "border-gray-200"
               }`}
             >
-              {/* Card Header */}
               <div>
                 <div className="text-center mb-6">
                   <h3 className="font-semibold text-xl mb-2 text-gray-900">
@@ -86,10 +70,10 @@ export function PricingSection() {
                   <div className="text-3xl font-bold mb-1 text-sky-600">
                     {plan.price}
                   </div>
-                  <p className="text-sm text-gray-600">{plan.description}</p>
+                  <p className="text-sm text-gray-600 italic">{t("startingPrice")}</p>
+                  <p className="mt-4 text-sm text-gray-600">{plan.description}</p>
                 </div>
 
-                {/* Features */}
                 <ul className="space-y-3 mb-8 text-sm text-gray-700">
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -103,7 +87,6 @@ export function PricingSection() {
                 </ul>
               </div>
 
-              {/* Button */}
               <div className="mt-auto">
                 <Button
                   onClick={handleScrollToContact}
