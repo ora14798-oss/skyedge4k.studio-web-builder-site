@@ -24,6 +24,7 @@ export function CTASectionForm() {
         muted
         loop
         playsInline
+        preload="auto"
       />
 
       {/* 🌫 Overlays */}

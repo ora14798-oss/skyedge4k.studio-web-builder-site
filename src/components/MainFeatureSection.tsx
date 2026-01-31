@@ -182,6 +182,7 @@ const MainFeatureSection = () => {
               loop
               muted
               playsInline
+              preload="auto"
               className="rounded-xl w-full h-full object-cover shadow-xl"
             />
           </AspectRatio>
@@ -232,6 +233,7 @@ const MainFeatureSection = () => {
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute right-(-8) top-0 h-full w-full object-cover"
         />
 

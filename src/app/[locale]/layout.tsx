@@ -5,7 +5,7 @@ import "../globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Navbar } from "@/components/Navbar";
-import { getSEOTags, SchemaMarkup } from "@/lib/seo";
+import { getSEOTags } from "@/lib/seo";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -60,23 +60,15 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <head>
-        <SchemaMarkup />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0a0a0a" />
-      </head>
-
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
-      >
+    <>
+      <div className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}
           <Analytics />
           <SpeedInsights />
         </NextIntlClientProvider>
-      </body>
-    </html>
+      </div>
+    </>
   );
 }

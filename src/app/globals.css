@@ -116,7 +116,17 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
+  html {
+    /* Ensures internal links (like #contact) scroll smoothly */
+    scroll-behavior: smooth;
+    /* Prevents the page from shifting left/right when the scrollbar appears/disappears */
+    scrollbar-gutter: stable;
+  }
+
   body {
     @apply bg-background text-foreground;
+    /* Extra insurance for mobile devices */
+    overflow-x: hidden;
   }
 }
