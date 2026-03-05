@@ -19,6 +19,9 @@ const TestimonialSection = () => {
   
   // Use t.raw to fetch the array of objects from JSON
   const testimonials = t.raw("items") as Testimonial[];
+  
+  // Limit to 6 items to avoid hydration issues with hidden elements
+  const displayTestimonials = testimonials.slice(0, 6);
 
   return (
     <section id="reviews" className="py-32 w-full">
@@ -38,34 +41,36 @@ const TestimonialSection = () => {
             columnsCountBreakPoints={{ 350: 1, 768: 2, 1024: 3 }}
           >
             <Masonry gutter="20px">
-              {testimonials.map((testimonial, idx) => (
-                <Card
-                  key={idx}
+              {displayTestimonials.map((testimonial, idx) => (
+                <div
+                  key={`${testimonial.name}-${idx}`}
                   className={cn(
-                    "p-5 shadow-md rounded-2xl w-full border-border/50 bg-card",
+                    "w-full",
                     idx > 3 && idx <= 5 && "hidden md:block",
                     idx > 5 && "hidden lg:block",
                   )}
                 >
-                  <div className="flex gap-4 leading-5">
-                    <Avatar className="size-9 rounded-full ring-1 ring-input">
-                      <AvatarImage
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                      />
-                    </Avatar>
-                    <div className="text-sm">
-                      <p className="font-medium text-foreground">{testimonial.name}</p>
-                      <p className="text-muted-foreground">
-                        {testimonial.role}
-                      </p>
+                  <Card className="p-5 shadow-md rounded-2xl w-full border-border/50 bg-card h-full">
+                    <div className="flex gap-4 leading-5">
+                      <Avatar className="size-9 rounded-full ring-1 ring-input">
+                        <AvatarImage
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                        />
+                      </Avatar>
+                      <div className="text-sm">
+                        <p className="font-medium text-foreground">{testimonial.name}</p>
+                        <p className="text-muted-foreground">
+                          {testimonial.role}
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mt-8 leading-7 text-foreground/70 italic">
-                    <q>{testimonial.content}</q>
-                  </div>
-                </Card>
+                    <div className="mt-8 leading-7 text-foreground/70 italic">
+                      <q>{testimonial.content}</q>
+                    </div>
+                  </Card>
+                </div>
               ))}
             </Masonry>
           </ResponsiveMasonry>
