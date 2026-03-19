@@ -1,10 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
 interface Testimonial {
@@ -14,14 +14,35 @@ interface Testimonial {
   content: string;
 }
 
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+  return (
+    <Card className="p-5 shadow-md rounded-2xl w-full border-border/50 bg-card h-full">
+      <div className="flex gap-4 leading-5">
+        <Avatar className="size-9 rounded-full ring-1 ring-input">
+          <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+        </Avatar>
+        <div className="text-sm">
+          <p className="font-medium text-foreground">{testimonial.name}</p>
+          <p className="text-muted-foreground">{testimonial.role}</p>
+        </div>
+      </div>
+      <div className="mt-8 leading-7 text-foreground/70 italic">
+        <q>{testimonial.content}</q>
+      </div>
+    </Card>
+  );
+}
+
 const TestimonialSection = () => {
   const t = useTranslations("Testimonials");
-  
-  // Use t.raw to fetch the array of objects from JSON
+  const [mounted, setMounted] = useState(false);
+
   const testimonials = t.raw("items") as Testimonial[];
-  
-  // Limit to 6 items to avoid hydration issues with hidden elements
   const displayTestimonials = testimonials.slice(0, 6);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section id="reviews" className="py-32 w-full">
@@ -37,43 +58,25 @@ const TestimonialSection = () => {
         </div>
 
         <div className="relative mt-14 w-full after:absolute after:inset-x-0 after:-bottom-2 after:h-96 after:bg-linear-to-t after:from-background">
-          <ResponsiveMasonry
-            columnsCountBreakPoints={{ 350: 1, 768: 2, 1024: 3 }}
-          >
-            <Masonry gutter="20px">
+          {mounted ? (
+            <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 1024: 3 }}>
+              <Masonry gutter="20px">
+                {displayTestimonials.map((testimonial, idx) => (
+                  <div key={`${testimonial.name}-${idx}`} className="w-full">
+                    <TestimonialCard testimonial={testimonial} />
+                  </div>
+                ))}
+              </Masonry>
+            </ResponsiveMasonry>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {displayTestimonials.map((testimonial, idx) => (
-                <div
-                  key={`${testimonial.name}-${idx}`}
-                  className={cn(
-                    "w-full",
-                    idx > 3 && idx <= 5 && "hidden md:block",
-                    idx > 5 && "hidden lg:block",
-                  )}
-                >
-                  <Card className="p-5 shadow-md rounded-2xl w-full border-border/50 bg-card h-full">
-                    <div className="flex gap-4 leading-5">
-                      <Avatar className="size-9 rounded-full ring-1 ring-input">
-                        <AvatarImage
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                        />
-                      </Avatar>
-                      <div className="text-sm">
-                        <p className="font-medium text-foreground">{testimonial.name}</p>
-                        <p className="text-muted-foreground">
-                          {testimonial.role}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-8 leading-7 text-foreground/70 italic">
-                      <q>{testimonial.content}</q>
-                    </div>
-                  </Card>
+                <div key={`${testimonial.name}-${idx}`} className="w-full">
+                  <TestimonialCard testimonial={testimonial} />
                 </div>
               ))}
-            </Masonry>
-          </ResponsiveMasonry>
+            </div>
+          )}
         </div>
       </div>
     </section>

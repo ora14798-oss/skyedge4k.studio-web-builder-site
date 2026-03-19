@@ -1,10 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { ChevronDown, ChevronUp, ImageIcon } from "lucide-react";
+
+const CLOUDINARY_BASE = "https://res.cloudinary.com/dtza2wtax/image/upload";
 
 const MainFeatureSection = () => {
   const t = useTranslations("MainFeature");
@@ -182,7 +185,7 @@ const MainFeatureSection = () => {
               loop
               muted
               playsInline
-              preload="auto"
+              preload="metadata"
               className="rounded-xl w-full h-full object-cover shadow-xl"
             />
           </AspectRatio>
@@ -213,10 +216,13 @@ const MainFeatureSection = () => {
                 key={i}
                 className="relative overflow-hidden rounded-2xl shadow-lg group aspect-[4/3] sm:aspect-auto"
               >
-                <img
-                  src={`https://res.cloudinary.com/dtza2wtax/image/upload/${img}`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                <Image
+                  src={`${CLOUDINARY_BASE}/${img}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                   alt={`Portfolio example ${i + 1}`}
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
@@ -233,7 +239,7 @@ const MainFeatureSection = () => {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           className="absolute right-(-8) top-0 h-full w-full object-cover"
         />
 

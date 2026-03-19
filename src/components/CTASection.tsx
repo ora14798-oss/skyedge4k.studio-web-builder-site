@@ -8,7 +8,7 @@ const CTASection = () => {
 
   return (
     <section className="w-full">
-      <div className="relative flex w-full items-center justify-center bg-[url('https://res.cloudinary.com/dqksqtluq/image/upload/v1759705000/skyedge-bg-cta.webp')] bg-cover bg-center py-20 md:py-32 text-center md:p-24 overflow-hidden">
+      <div className="relative flex w-full items-center justify-center py-20 md:py-32 text-center md:p-24 overflow-hidden">
         {/* 🎥 Background Video */}
         <video
           src="https://res.cloudinary.com/dtza2wtax/video/upload/v1764280462/sakura-with-full-moon.3840x2160_tvfyv9.mp4"
@@ -16,7 +16,7 @@ const CTASection = () => {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
 

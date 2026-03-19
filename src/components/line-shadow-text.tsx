@@ -8,12 +8,14 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
-import { type MotionProps, motion } from "motion/react";
+import { motion } from "framer-motion";
+
+type MotionSpanProps = React.ComponentProps<typeof motion.span>;
 import { cn } from "@/lib/utils";
 
 interface LineShadowTextProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,
-    MotionProps {
+  extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionSpanProps>,
+    MotionSpanProps {
   shadowColor?: string;
   as?: React.ElementType;
 }
@@ -25,7 +27,7 @@ function LineShadowText({
   as: Component = "span",
   ...props
 }: LineShadowTextProps) {
-  const MotionComponent = motion.create(Component);
+  const MotionComponent = motion.create(Component as "span");
   const content = typeof children === "string" ? children : null;
 
   if (!content) {

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import AutoScroll from "embla-carousel-auto-scroll";
 import {
   Carousel,
@@ -55,8 +56,15 @@ const LogosSections = () => {
           <CarouselContent className="ml-0">
             {logos.map((logo) => (
               <CarouselItem key={logo.id} className="flex basis-1/3 justify-center pl-0 sm:basis-1/4 md:basis-1/5 lg:basis-1/6">
-                <div className="flex shrink-0 items-center justify-center mx-2 sm:mx-4">
-                  <img src={logo.image} alt={logo.description} className={logo.className} />
+                <div className="flex shrink-0 items-center justify-center mx-2 sm:mx-4 relative h-14 sm:h-16 w-24">
+                  <Image
+                    src={logo.image}
+                    alt={logo.description}
+                    fill
+                    sizes="(max-width: 640px) 80px, 96px"
+                    className="object-contain"
+                    loading="lazy"
+                  />
                 </div>
               </CarouselItem>
             ))}
@@ -81,7 +89,16 @@ const LogosSections = () => {
                     <p className="text-foreground text-base sm:text-lg font-semibold tracking-tight">
                       {testimonial.name}
                     </p>
-                    <img className="mx-auto my-5 w-32 sm:w-40 md:mx-0" alt="Company logo" src={testimonial.image} />
+                    <div className="relative mx-auto my-5 w-32 sm:w-40 md:mx-0 h-20 sm:h-24">
+                      <Image
+                        src={testimonial.image}
+                        alt="Company logo"
+                        fill
+                        sizes="128px"
+                        className="object-contain"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
                 </div>
               </CarouselItem>
