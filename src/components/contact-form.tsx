@@ -40,13 +40,13 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div className="text-center space-y-4 py-8">
-        <div className="text-2xl font-semibold text-white mb-2">
+        <div dir="auto" className="text-2xl font-semibold text-white mb-2">
           {t("successTitle")}
         </div>
-        <p className="text-white/80">
+        <p dir="auto" className="text-white/80">
           {t("successMessage")}
         </p>
-        <p className="text-white/80">
+        <p dir="auto" className="text-white/80">
           {t("successSub")}
         </p>
       </div>
@@ -55,25 +55,26 @@ export default function ContactForm() {
 
   return (
     <div className="rounded-3xl" id="contact">
-      <h3 className="text-xl font-semibold mb-6 text-white">
+      <h3 dir="auto" className="text-xl font-semibold mb-6 text-white">
         {t("title")}
       </h3>
       <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-white/80 mb-1">
+          <label dir="auto" className="block text-sm font-medium text-white/80 mb-1">
             {t("labels.name")}
           </label>
           <input
             type="text"
             name="name"
             required
+            dir="auto"
             className="w-full p-2 rounded-md bg-white/20 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
             placeholder={t("placeholders.name")}
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-white/80 mb-1">
+          <label dir="auto" className="block text-sm font-medium text-white/80 mb-1">
             {t("labels.email")}
           </label>
           <input
@@ -86,7 +87,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-white/80 mb-1">
+          <label dir="auto" className="block text-sm font-medium text-white/80 mb-1">
             {t("labels.phone")}
           </label>
           <input
@@ -98,18 +99,19 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-white/80 mb-1">
+          <label dir="auto" className="block text-sm font-medium text-white/80 mb-1">
             {t("labels.message")}
           </label>
           <textarea
             name="message"
             required
+            dir="auto"
             className="w-full p-2 rounded-md bg-white/20 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 min-h-[100px]"
             placeholder={t("placeholders.message")}
           />
         </div>
 
-        {error && <div className="text-red-400 text-sm">{error}</div>}
+        {error && <div dir="auto" className="text-red-400 text-sm">{error}</div>}
 
         <Button
           type="submit"
@@ -117,7 +119,7 @@ export default function ContactForm() {
           className="w-full font-bold"
           disabled={isSubmitting}
         >
-          {isSubmitting ? t("sending") : t("submit")}
+          <span dir="auto">{isSubmitting ? t("sending") : t("submit")}</span>
         </Button>
       </form>
     </div>

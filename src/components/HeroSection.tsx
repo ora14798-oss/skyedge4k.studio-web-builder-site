@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl"; // Import translations
-import LanguageSwitcher from "./LanguageSwitcher"; 
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const HeroSection = () => {
   const t = useTranslations("Hero"); // Hook to access Hero translations
@@ -16,9 +16,9 @@ const HeroSection = () => {
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
     if (latest > previous && latest > 50) {
-      setIsVisible(false); 
+      setIsVisible(false);
     } else {
-      setIsVisible(true); 
+      setIsVisible(true);
     }
   });
 
@@ -36,13 +36,13 @@ const HeroSection = () => {
       id="hero"
       className="relative w-screen bg-background pt-20 md:pt-8 pb-24 md:py-32 overflow-hidden"
     >
-      {/* Floating Language Switcher - 150px from top */}
+      {/* Floating Language Switcher - 150px from top. z-40 so it sits below the mobile nav Sheet (z-50) instead of on top of it. */}
       <motion.div
-        className="fixed top-[150px] right-4 z-[100]"
+        className="fixed top-[150px] right-4 z-40"
         initial={{ x: 0, opacity: 1 }}
-        animate={{ 
-          x: isVisible ? 0 : 200, 
-          opacity: isVisible ? 1 : 0 
+        animate={{
+          x: isVisible ? 0 : 200,
+          opacity: isVisible ? 1 : 0
         }}
         transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
       >
@@ -84,16 +84,16 @@ const HeroSection = () => {
           className="text-sm sm:text-md bg-muted/60 group mt-16 md:mt-24 flex w-fit items-center justify-center gap-3 rounded-full px-4 sm:px-5 py-1 tracking-tight"
         >
           <span className="bg-foreground size-2 rounded-full" />
-          <span>{t("badge")}</span>
+          <span dir="auto">{t("badge")}</span>
         </Button>
 
-        <h1 className="relative z-10 mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
+        <h1 dir="auto" className="relative z-10 mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]">
           {t("titlePart1")}{" "}
           <span className="text-blue-500 font-extrabold">{t("titleHighlight")}</span>
         </h1>
 
-        <p className="text-white/95 mt-5 max-w-md sm:max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] leading-relaxed text-base sm:text-lg font-semibold px-2">
-          <strong className="text-white">SkyEdge4K.Studio</strong> {t("description")}
+        <p dir="auto" className="text-white/95 mt-5 max-w-md sm:max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] leading-relaxed text-base sm:text-lg font-semibold px-2">
+          <strong className="text-white">{t("descriptionLead")}</strong> {t("description")}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6">
@@ -101,7 +101,7 @@ const HeroSection = () => {
             variant="secondary"
             className="text-sm sm:text-md group flex w-full sm:w-fit items-center justify-center gap-2 rounded-full px-5 py-2 tracking-tight"
           >
-            <a href="#contact">{t("btnProject")}</a>
+            <a href="#contact" dir="auto">{t("btnProject")}</a>
             <ArrowRight className="size-4 -rotate-45 transition-all ease-out group-hover:ml-2 group-hover:rotate-0" />
           </Button>
 
@@ -109,7 +109,7 @@ const HeroSection = () => {
             variant="default"
             className="text-sm sm:text-md group flex w-full sm:w-fit items-center justify-center gap-2 rounded-full px-5 py-2 tracking-tight"
           >
-            <a href="#contact">{t("btnCall")}</a>
+            <a href="#contact" dir="auto">{t("btnCall")}</a>
             <ArrowRight className="size-4 -rotate-45 transition-all ease-out group-hover:ml-2 group-hover:rotate-0" />
           </Button>
         </div>

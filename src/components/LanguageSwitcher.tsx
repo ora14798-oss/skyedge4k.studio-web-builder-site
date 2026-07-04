@@ -17,7 +17,7 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
-  function onSelectChange(nextLocale: "en" | "es") {
+  function onSelectChange(nextLocale: "en" | "es" | "he") {
     // If it's already the current locale, do nothing
     if (nextLocale === locale) return;
 
@@ -64,11 +64,18 @@ export default function LanguageSwitcher() {
           English (EN) {locale === 'en' && "✓"}
         </DropdownMenuItem>
         
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => onSelectChange("es")}
           className="flex items-center gap-3 cursor-pointer py-2.5 focus:bg-black focus:text-white transition-colors uppercase font-black text-[10px] tracking-wider"
         >
           Español (ES) {locale === 'es' && "✓"}
+        </DropdownMenuItem>
+
+        <DropdownMenuItem
+          onClick={() => onSelectChange("he")}
+          className="flex items-center gap-3 cursor-pointer py-2.5 focus:bg-black focus:text-white transition-colors uppercase font-black text-[10px] tracking-wider"
+        >
+          HEBREW (HE) {locale === 'he' && "✓"}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -39,11 +39,11 @@ export function CTASectionForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* 📝 Text Content */}
           <div className="text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 dir="auto" className="text-3xl md:text-4xl font-bold mb-6">
               {t("title")}
             </h2>
 
-            <p className="text-lg text-white/90 mb-6">
+            <p dir="auto" className="text-lg text-white/90 mb-6">
               {t.rich("description", {
                 strong: (chunks) => <strong className="text-blue-400">{chunks}</strong>,
                 em: (chunks) => <em className="text-white not-italic font-bold">{chunks}</em>
@@ -52,14 +52,14 @@ export function CTASectionForm() {
 
             <ul className="space-y-3 mb-6 text-white/90">
               {t.raw("bullets").map((bullet: string, index: number) => (
-                <li key={index} className="flex items-center">
+                <li key={index} dir="auto" className="flex items-center">
                   <span className="mr-2 text-blue-400">✓</span>
                   {bullet}
                 </li>
               ))}
             </ul>
 
-            <p className="text-lg text-white/90 mb-8 font-medium">
+            <p dir="auto" className="text-lg text-white/90 mb-8 font-medium">
               {t("closing")}
             </p>
 
@@ -67,18 +67,18 @@ export function CTASectionForm() {
             <div className="space-y-2 text-white/90 text-sm">
               <p className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span className="font-semibold">USA - COL - CDMX</span>
+                <span dir="auto" className="font-semibold">Kibbutz Hulata, Northern Israel</span>
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <a href="https://wa.me/573001614490" className="hover:underline transition-all hover:text-blue-300 font-semibold">
-                  {t("phoneCol")}: +57 300 161 4490
+                <a href="https://wa.me/972523710439" dir="auto" className="hover:underline transition-all hover:text-blue-300 font-semibold">
+                  {t("phoneCol")}: +972 52 371 0439
                 </a>
               </p>
-              
+
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:skyedge4k@gmail.com" className="hover:underline transition-all hover:text-blue-300">
+                <a href="mailto:skyedge4k@gmail.com" dir="auto" className="hover:underline transition-all hover:text-blue-300">
                   skyedge4k@gmail.com
                 </a>
               </p>

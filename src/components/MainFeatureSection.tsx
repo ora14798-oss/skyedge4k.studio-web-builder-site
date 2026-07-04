@@ -2,16 +2,33 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
-import { ChevronDown, ChevronUp, ImageIcon } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { AboutFoundersSection } from "./AboutFoundersSection";
 
 const CLOUDINARY_BASE = "https://res.cloudinary.com/dtza2wtax/image/upload";
+const PORTFOLIO_VIDEO_URL = "https://res.cloudinary.com/dtza2wtax/video/upload/v1764394277/Sequence_01_2_gbwq2z.mp4";
 
 const MainFeatureSection = () => {
   const t = useTranslations("MainFeature");
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [active, setActive] = useState(0);
+  const [aspectRatios, setAspectRatios] = useState<Record<string, number>>({});
+
+  const handleImageLoad = (id: string) => (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    if (img.naturalWidth && img.naturalHeight) {
+      setAspectRatios((prev) => ({ ...prev, [id]: img.naturalWidth / img.naturalHeight }));
+    }
+  };
+
+  const handleVideoLoad = (id: string) => (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = e.currentTarget;
+    if (video.videoWidth && video.videoHeight) {
+      setAspectRatios((prev) => ({ ...prev, [id]: video.videoWidth / video.videoHeight }));
+    }
+  };
 
   // marquee items helper
   const marqueeItems = [
@@ -41,6 +58,20 @@ const MainFeatureSection = () => {
     "v1764280195/Screenshot_2025-10-05_214218_gtm16t.png",
   ];
 
+  const portfolioSlides = [
+    { id: "video", type: "video" as const, src: PORTFOLIO_VIDEO_URL },
+    ...portfolioImages.map((img, i) => ({
+      id: `img-${i}`,
+      type: "image" as const,
+      src: `${CLOUDINARY_BASE}/${img}`,
+    })),
+  ];
+
+  const goTo = (index: number) => {
+    const n = portfolioSlides.length;
+    setActive(((index % n) + n) % n);
+  };
+
   return (
     <section
       id="whatwedo"
@@ -51,13 +82,13 @@ const MainFeatureSection = () => {
         <div className="flex whitespace-nowrap animate-marquee text-sm font-medium text-white py-2 tracking-wide">
           <div className="flex shrink-0">
             {marqueeItems.map((item, idx) => (
-              <span key={idx} className="mx-8">{item}</span>
+              <span key={idx} dir="auto" className="mx-8">{item}</span>
             ))}
           </div>
 
           <div className="flex shrink-0">
             {marqueeItems.map((item, idx) => (
-              <span key={`dup-${idx}`} className="mx-8">{item}</span>
+              <span key={`dup-${idx}`} dir="auto" className="mx-8">{item}</span>
             ))}
           </div>
         </div>
@@ -69,7 +100,7 @@ const MainFeatureSection = () => {
           }
           .animate-marquee {
             display: flex;
-            width: 200%;
+            width: max-content;
             animation: marquee 70s linear infinite;
           }
         `}</style>
@@ -79,17 +110,17 @@ const MainFeatureSection = () => {
       <div className="bg-white text-foreground py-15">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            <h2 dir="auto" className="text-4xl font-bold tracking-tight sm:text-5xl">
               {t("features.title")}
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p dir="auto" className="mt-6 text-lg leading-8 text-gray-600">
               {t("features.description")}
             </p>
           </div>
 
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-              {/* Custom Web Development */}
+              {/* Landing Page Websites */}
               <div className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7">
                   <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-primary">
@@ -107,14 +138,14 @@ const MainFeatureSection = () => {
                       />
                     </svg>
                   </div>
-                  {t("features.dev.title")}
+                  <span dir="auto">{t("features.landing.title")}</span>
                 </dt>
-                <dd className="mt-4 text-base leading-7 text-gray-600">
-                  {t("features.dev.desc")}
+                <dd dir="auto" className="mt-4 text-base leading-7 text-gray-600">
+                  {t("features.landing.desc")}
                 </dd>
               </div>
 
-              {/* SEO */}
+              {/* Professional Business Websites */}
               <div className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7">
                   <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-primary">
@@ -128,18 +159,18 @@ const MainFeatureSection = () => {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+                        d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
                       />
                     </svg>
                   </div>
-                  {t("features.seo.title")}
+                  <span dir="auto">{t("features.website.title")}</span>
                 </dt>
-                <dd className="mt-4 text-base leading-7 text-gray-600">
-                  {t("features.seo.desc")}
+                <dd dir="auto" className="mt-4 text-base leading-7 text-gray-600">
+                  {t("features.website.desc")}
                 </dd>
               </div>
 
-              {/* Ads */}
+              {/* Online Store with CRM */}
               <div className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7">
                   <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-primary">
@@ -153,14 +184,14 @@ const MainFeatureSection = () => {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 1.98-4.685 2.57-7.135.108-.45-.233-.885-.696-.885H5.25M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
                       />
                     </svg>
                   </div>
-                  {t("features.ads.title")}
+                  <span dir="auto">{t("features.store.title")}</span>
                 </dt>
-                <dd className="mt-4 text-base leading-7 text-gray-600">
-                  {t("features.ads.desc")}
+                <dd dir="auto" className="mt-4 text-base leading-7 text-gray-600">
+                  {t("features.store.desc")}
                 </dd>
               </div>
             </dl>
@@ -168,68 +199,116 @@ const MainFeatureSection = () => {
         </div>
       </div>
       
-      {/* ⭐ FEATURED VIDEO SECTION */}
-      <div className="w-full bg-black py-24 px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+      {/* ⭐ PREMIUM PORTFOLIO CAROUSEL */}
+      <div className="w-full overflow-hidden bg-gradient-to-b from-black to-gray-900 py-16 sm:py-24">
+        <div className="mx-auto mb-12 max-w-5xl px-6 text-center sm:mb-16">
+          <h2 dir="auto" className="text-4xl font-bold text-white mb-6">
             {t("video.title")}
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-10">
+          <p dir="auto" className="text-gray-300 max-w-2xl mx-auto">
             {t("video.desc")}
           </p>
-
-          <AspectRatio ratio={16 / 9}>
-            <video
-              src="https://res.cloudinary.com/dtza2wtax/video/upload/v1764394277/Sequence_01_2_gbwq2z.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              className="rounded-xl w-full h-full object-cover shadow-xl"
-            />
-          </AspectRatio>
         </div>
-      </div>
 
-      {/* ⭐ Portfolio Image Grid - Collapsible for Mobile */}
-      <div className="relative w-full bg-gradient-to-b from-black to-gray-900 py-10 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          
-          {/* Mobile Toggle Button (Visible only on small screens) */}
-          <div className="flex justify-center mb-8 sm:hidden">
-            <Button 
-              onClick={() => setIsGalleryOpen(!isGalleryOpen)}
-              variant="outline"
-              className="border-white/20 text-white bg-white/10 hover:bg-white/20 rounded-full px-6 py-6"
-            >
-              <ImageIcon className="mr-2 h-4 w-4" />
-              {isGalleryOpen ? t("portfolio.hide") : t("portfolio.show")}
-              {isGalleryOpen ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
-            </Button>
-          </div>
+        <div className="relative flex h-80 w-full items-center justify-center sm:h-96 md:h-[28rem] lg:h-[30rem]">
+          {/* Center glow */}
+          <motion.div
+            className="pointer-events-none absolute h-72 w-72 rounded-full bg-white blur-2xl sm:h-80 sm:w-80 md:h-96 md:w-96 lg:h-[26rem] lg:w-[26rem]"
+            animate={{ scale: [1, 1.05, 1], opacity: [0.7, 0.9, 0.7] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          />
 
-          {/* Image Grid - Responsive logic */}
-          <div className={`${isGalleryOpen ? 'grid' : 'hidden'} sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500`}>
-            {portfolioImages.map((img, i) => (
+          {/* Cards */}
+          {portfolioSlides.map((slide, index) => {
+            const n = portfolioSlides.length;
+            let offset = index - active;
+            if (offset > n / 2) offset -= n;
+            if (offset < -n / 2) offset += n;
+            const dist = Math.abs(offset);
+            const scale = dist === 0 ? 1.8 : Math.max(0.45, 1.1 - (dist - 1) * 0.35);
+            const visible = dist <= 3;
+
+            return (
               <div
-                key={i}
-                className="relative overflow-hidden rounded-2xl shadow-lg group aspect-[4/3] sm:aspect-auto"
+                key={slide.id}
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                style={{ zIndex: 50 - dist }}
               >
-                <Image
-                  src={`${CLOUDINARY_BASE}/${img}`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  alt={`Portfolio example ${i + 1}`}
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <motion.div
+                  className="relative w-[254px] overflow-hidden rounded-2xl bg-black shadow-2xl sm:w-[286px] md:w-[318px] lg:w-[350px]"
+                  style={{
+                    aspectRatio: aspectRatios[slide.id] ?? 16 / 9,
+                    pointerEvents: visible ? "auto" : "none",
+                    cursor: dist === 0 ? "default" : "pointer",
+                  }}
+                  animate={{
+                    x: `${offset * 115}%`,
+                    y: `${dist * 6}%`,
+                    scale,
+                    opacity: visible ? 1 : 0,
+                  }}
+                  transition={{ type: "spring", stiffness: 260, damping: 30 }}
+                  whileHover={{ scale: scale * 1.06 }}
+                  onClick={() => goTo(index)}
+                >
+                  {slide.type === "video" ? (
+                    <video
+                      src={slide.src}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
+                      onLoadedMetadata={handleVideoLoad(slide.id)}
+                      className="absolute inset-0 h-full w-full object-contain"
+                    />
+                  ) : (
+                    <Image
+                      src={slide.src}
+                      fill
+                      unoptimized
+                      className="object-contain"
+                      alt={`Portfolio example ${index}`}
+                      loading="eager"
+                      onLoad={handleImageLoad(slide.id)}
+                    />
+                  )}
+
+                  <motion.div
+                    className="pointer-events-none absolute inset-0 bg-black"
+                    animate={{ opacity: dist === 0 ? 0 : 0.55 }}
+                    transition={{ duration: 0.4 }}
+                  />
+                </motion.div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
+
+        {/* Arrows */}
+        <div className="relative z-[60] mt-8 flex items-center justify-center gap-6 sm:mt-10">
+          <Button
+            onClick={() => goTo(active - 1)}
+            size="icon"
+            aria-label="Previous"
+            className="h-11 w-11 rounded-full bg-white text-black shadow-[0_0_20px_rgba(255,255,255,0.5)] hover:bg-white hover:shadow-[0_0_28px_rgba(255,255,255,0.7)] sm:h-12 sm:w-12"
+          >
+            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+          </Button>
+          <Button
+            onClick={() => goTo(active + 1)}
+            size="icon"
+            aria-label="Next"
+            className="h-11 w-11 rounded-full bg-white text-black shadow-[0_0_20px_rgba(255,255,255,0.5)] hover:bg-white hover:shadow-[0_0_28px_rgba(255,255,255,0.7)] sm:h-12 sm:w-12"
+          >
+            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+          </Button>
+        </div>
+
+        <div className="mx-auto mt-16 h-px w-full max-w-5xl bg-white/25 sm:mt-20" />
       </div>
+
+      <AboutFoundersSection />
 
       {/* CTA Section */}
       <div className="relative bg-primary py-16 sm:py-24 overflow-hidden">
@@ -247,10 +326,10 @@ const MainFeatureSection = () => {
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 dir="auto" className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               {t("cta.title")}
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-100">
+            <p dir="auto" className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-100">
               {t("cta.description")}
             </p>
 
@@ -259,7 +338,7 @@ const MainFeatureSection = () => {
                 asChild
                 className="h-fit bg-white text-foreground rounded-full px-8 py-4 text-lg font-semibold hover:bg-gray-200 shadow-sm"
               >
-                <a href="#contact">{t("cta.button")}</a>
+                <a href="#contact" dir="auto">{t("cta.button")}</a>
               </Button>
             </div>
           </div>

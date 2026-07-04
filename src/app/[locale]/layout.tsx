@@ -26,21 +26,20 @@ const geistMono = Geist_Mono({
 
 // ✅ Updated SEO Metadata
 export const metadata: Metadata = getSEOTags({
-  title: "SkyEdge 4K | Web Design, SEO & Marketing Agency in USA & Colombia",
+  title: "SkyEdge 4K | Web Design & Digital Marketing Studio in Israel",
   description:
-    "SkyEdge 4K is a professional web design and digital marketing agency based in Cartagena, Colombia & California, USA. We build high-performance websites, manage SEO, Google Ads, and social media strategies that grow your business.",
+    "SkyEdge 4K is a professional web design and digital marketing studio based in Kibbutz Hulata, Northern Israel. We build landing pages, business websites, and online stores with built-in CRM that grow your business.",
   canonicalUrlRelative: "/",
   keywords: [
     "web design",
-    "SEO agency Colombia & USA",
-    "digital marketing Cartagena & California",
-    "social media management",
-    "Google Ads campaigns",
-    "marketing strategy",
+    "digital marketing Israel",
+    "landing page design",
+    "business website design",
+    "online store with CRM",
     "SkyEdge 4K",
     "web development",
     "branding services",
-    "creative studio Cartagena",
+    "creative studio Israel",
   ],
 });
 

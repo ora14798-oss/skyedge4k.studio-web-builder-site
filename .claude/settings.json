@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Process -Id 22148 | Select-Object Id,ProcessName,Path; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5; \"Status: $\\($r.StatusCode\\)\" } catch { \"ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(1..3 | ForEach-Object { try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5; \"Attempt $_ : Status $\\($r.StatusCode\\)\" } catch { \"Attempt $_ : ERROR $\\($_.Exception.Message\\)\" } })",
+      "Bash(npx tsc *)"
+    ]
+  }
+}

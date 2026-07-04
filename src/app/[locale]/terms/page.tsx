@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Terms of Service | SkyEdge4K.Studio",
   description:
-    "Read the terms and conditions for using SkyEdge4K.Studio's marketing, SEO, and web development services.",
+    "Read the terms and conditions for using SkyEdge4K.Studio's marketing and web development services.",
 };
 
 export default function TermsOfServicePage() {
@@ -29,7 +29,7 @@ export default function TermsOfServicePage() {
           1. Services
         </h2>
         <p className="text-gray-400 mb-4">
-          We provide marketing, SEO, web development, and related digital
+          We provide marketing, web development, and related digital
           services. Each project is defined by a specific agreement or proposal
           shared with the client.
         </p>

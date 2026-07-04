@@ -31,20 +31,18 @@ export const getSEOTags = ({
 }: SEOTagsProps): Metadata => {
   return {
     title:
-      title || "SkyEdge 4K | Web Design, SEO & Marketing Agency in Cartagena",
+      title || "SkyEdge 4K | Web Design & Digital Marketing Studio in Israel",
     description:
       description ||
-      "SkyEdge 4K is a professional web design and digital marketing agency based in Cartagena, Colombia. We build high-performance websites, manage SEO, Google Ads, and social media strategies that grow your business.",
+      "SkyEdge 4K is a professional web design and digital marketing studio based in Kibbutz Hulata, Northern Israel. We build landing pages, business websites, and online stores with built-in CRM that grow your business.",
     other: {
       keywords: (
         keywords || [
-          "web design Cartagena",
-          "SEO agency Colombia",
-          "digital marketing Cartagena",
-          "Google Ads management",
-          "social media management",
+          "web design Israel",
+          "landing page design",
+          "business website design",
+          "online store with CRM",
           "SkyEdge 4K",
-          "marketing strategy Colombia",
           "web development",
         ]
       ).join(", "),
@@ -61,11 +59,11 @@ export const getSEOTags = ({
       title:
         openGraph?.title ||
         title ||
-        "SkyEdge 4K | Creative Web Design & SEO Agency",
+        "SkyEdge 4K | Creative Web Design Studio",
       description:
         openGraph?.description ||
         description ||
-        "We design and build high-performance websites with integrated SEO and Google Ads strategies that attract real clients and drive measurable growth.",
+        "We design and build high-performance landing pages, business websites, and online stores that attract real clients and drive measurable growth.",
       url: openGraph?.url || "https://skyedge4k.com/",
       siteName: "SkyEdge 4K",
       images: openGraph?.images || [
@@ -121,22 +119,22 @@ export const SchemaMarkup = () => {
           "@id": "https://skyedge4k.com",
           name: "SkyEdge 4K",
           description:
-            "SkyEdge 4K is a creative digital marketing and web design agency in Cartagena, Colombia. We help businesses grow through professional websites, SEO, and marketing strategies.",
+            "SkyEdge 4K is a creative digital marketing and web design studio in Kibbutz Hulata, Northern Israel. We help businesses grow through professional websites and marketing strategies.",
           url: "https://skyedge4k.com",
           telephone: "+57 3001614490",
           email: "skyedge4k@gmail.com",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Cartagena, Bolívar",
-            addressLocality: "Cartagena",
-            addressRegion: "Bolívar",
-            postalCode: "130001",
-            addressCountry: "CO",
+            streetAddress: "Kibbutz Hulata",
+            addressLocality: "Hulata",
+            addressRegion: "Upper Galilee",
+            postalCode: "12110",
+            addressCountry: "IL",
           },
           geo: {
             "@type": "GeoCoordinates",
-            latitude: 10.391,
-            longitude: -75.4794,
+            latitude: 33.0511,
+            longitude: 35.6092,
           },
           image: "https://skyedge4k.com/og-image.jpg",
           logo: "https://skyedge4k.com/logo.png",
@@ -148,57 +146,37 @@ export const SchemaMarkup = () => {
           openingHours: "Mo-Fr 09:00-18:00",
           hasOfferCatalog: {
             "@type": "OfferCatalog",
-            name: "Digital Marketing & Creative Services",
+            name: "Web Design & E-Commerce Services",
             itemListElement: [
               {
                 "@type": "Offer",
                 itemOffered: {
                   "@type": "Service",
-                  name: "Web Design & Development",
+                  name: "Landing Page Websites",
                   description:
-                    "Custom websites and eCommerce stores optimized for performance and conversions.",
+                    "Professional, high-converting landing pages, custom-built or launched from our own premium templates.",
                 },
-                url: "https://skyedge4k.com/services#web-design",
+                url: "https://skyedge4k.com/services#landing-page",
               },
               {
                 "@type": "Offer",
                 itemOffered: {
                   "@type": "Service",
-                  name: "SEO Optimization",
+                  name: "Professional Business Websites",
                   description:
-                    "Professional SEO strategies to boost your visibility and bring organic traffic.",
+                    "Complete business websites, custom designed or built from our own premium templates.",
                 },
-                url: "https://skyedge4k.com/services#seo",
+                url: "https://skyedge4k.com/services#business-website",
               },
               {
                 "@type": "Offer",
                 itemOffered: {
                   "@type": "Service",
-                  name: "Social Media Management",
+                  name: "Online Store with CRM",
                   description:
-                    "We manage and grow your social media presence with strategic content and ads.",
+                    "Fully functional online stores with a built-in CRM for easy self-management.",
                 },
-                url: "https://skyedge4k.com/services#social-media",
-              },
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "Google Ads Campaigns",
-                  description:
-                    "Google Ads setup and optimization to increase leads and conversions.",
-                },
-                url: "https://skyedge4k.com/services#google-ads",
-              },
-              {
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: "3D Virtual Tours",
-                  description:
-                    "Immersive 3D tours for real estate and construction projects.",
-                },
-                url: "https://skyedge4k.com/services#3d-virtual-tours",
+                url: "https://skyedge4k.com/services#online-store",
               },
             ],
           },

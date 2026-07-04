@@ -1,14 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import AutoScroll from "embla-carousel-auto-scroll";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-import { Separator } from "@/components/ui/separator";
-import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
 const LogosSections = () => {
@@ -25,86 +17,72 @@ const LogosSections = () => {
     { id: "logo-8", description: "Client 8", image: "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280443/MELDENNE_S_9_i9w6i7.png", className: "h-14 w-auto sm:h-16" },
   ];
 
-  const testimonials = [
-    {
-      quote: t("testimonials.laura.quote"),
-      name: t("testimonials.laura.name"),
-      image: "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280453/ChatGPT_Image_Oct_3_2025_07_17_33_PM_ezkfg1.png",
-    },
-    {
-      quote: t("testimonials.carlos.quote"),
-      name: t("testimonials.carlos.name"),
-      image: "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280443/MELDENNE_S_9_i9w6i7.png",
-    },
-    {
-      quote: t("testimonials.sofia.quote"),
-      name: t("testimonials.sofia.name"),
-      image: "https://res.cloudinary.com/dtza2wtax/image/upload/v1764280444/MELDENNE_S_6_rhgeun.png",
-    },
-  ];
-
   return (
     <section className="py-16 sm:py-20 pt-0">
       <div className="container flex flex-col items-center text-center">
-        <h1 className="text-foreground my-8 text-lg sm:text-xl font-extrabold tracking-tight">
+        <h1 dir="auto" className="text-foreground my-8 text-lg sm:text-xl font-extrabold tracking-tight">
           {t("title")}
         </h1>
       </div>
 
-      <div className="relative mx-auto flex items-center justify-center pt-4 sm:pt-8 max-w-[95%] sm:max-w-5xl">
-        <Carousel opts={{ loop: true }} plugins={[AutoScroll({ playOnInit: true, speed: 2 })]}>
-          <CarouselContent className="ml-0">
+      <div className="relative mx-auto overflow-hidden pt-4 sm:pt-8 max-w-[95%] sm:max-w-5xl">
+        <div className="flex w-max whitespace-nowrap animate-logo-marquee">
+          <div className="flex shrink-0 items-center">
             {logos.map((logo) => (
-              <CarouselItem key={logo.id} className="flex basis-1/3 justify-center pl-0 sm:basis-1/4 md:basis-1/5 lg:basis-1/6">
-                <div className="flex shrink-0 items-center justify-center mx-2 sm:mx-4 relative h-14 sm:h-16 w-24">
-                  <Image
-                    src={logo.image}
-                    alt={logo.description}
-                    fill
-                    sizes="(max-width: 640px) 80px, 96px"
-                    className="object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              </CarouselItem>
+              <div key={logo.id} className="flex shrink-0 items-center justify-center mx-2 sm:mx-4 relative h-14 sm:h-16 w-24">
+                <Image
+                  src={logo.image}
+                  alt={logo.description}
+                  fill
+                  sizes="(max-width: 640px) 80px, 96px"
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </div>
             ))}
-          </CarouselContent>
-        </Carousel>
+          </div>
+          <div className="flex shrink-0 items-center" aria-hidden="true">
+            {logos.map((logo) => (
+              <div key={`dup-${logo.id}`} className="flex shrink-0 items-center justify-center mx-2 sm:mx-4 relative h-14 sm:h-16 w-24">
+                <Image
+                  src={logo.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 80px, 96px"
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="flex shrink-0 items-center" aria-hidden="true">
+            {logos.map((logo) => (
+              <div key={`dup2-${logo.id}`} className="flex shrink-0 items-center justify-center mx-2 sm:mx-4 relative h-14 sm:h-16 w-24">
+                <Image
+                  src={logo.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 80px, 96px"
+                  className="object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <style jsx>{`
+          @keyframes logo-marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-33.3333%); }
+          }
+          .animate-logo-marquee {
+            animation: logo-marquee 30s linear infinite;
+          }
+        `}</style>
+
         <div className="bg-gradient-to-r from-background absolute inset-y-0 left-0 w-8 sm:w-12 to-transparent"></div>
         <div className="bg-gradient-to-l from-background absolute inset-y-0 right-0 w-8 sm:w-12 to-transparent"></div>
-      </div>
-
-      <Separator className="my-12 sm:my-20 mx-auto max-w-[90%] sm:max-w-5xl" />
-
-      <div className="px-4 sm:px-0">
-        <Carousel opts={{ loop: true }} className="mx-auto w-full max-w-[95%] sm:max-w-6xl">
-          <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="basis-full sm:basis-1/2 lg:basis-1/3">
-                <div className={cn("relative border-border w-full border-r px-6 sm:px-8 text-center sm:text-left", index == 0 && "lg:border-l")}>
-                  <h5 className="text-muted-foreground mb-8 sm:mb-14 mt-5 text-base sm:text-lg tracking-tight">
-                    {testimonial.quote}
-                  </h5>
-                  <div className="mt-auto">
-                    <p className="text-foreground text-base sm:text-lg font-semibold tracking-tight">
-                      {testimonial.name}
-                    </p>
-                    <div className="relative mx-auto my-5 w-32 sm:w-40 md:mx-0 h-20 sm:h-24">
-                      <Image
-                        src={testimonial.image}
-                        alt="Company logo"
-                        fill
-                        sizes="128px"
-                        className="object-contain"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
       </div>
     </section>
   );

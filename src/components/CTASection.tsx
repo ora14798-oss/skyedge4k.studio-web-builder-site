@@ -25,11 +25,11 @@ const CTASection = () => {
 
         {/* Text Content */}
         <div className="relative z-20 w-full px-6">
-          <h1 className="mb-6 text-balance text-white text-3xl font-bold md:text-5xl leading-tight">
+          <h1 dir="auto" className="mb-6 text-balance text-white text-3xl font-bold md:text-5xl leading-tight">
             {t("title")}
           </h1>
 
-          <p className="text-white/90 font-medium md:text-lg max-w-2xl mx-auto">
+          <p dir="auto" className="text-white/90 font-medium md:text-lg max-w-2xl mx-auto">
             {t("description")}
           </p>
 
@@ -40,7 +40,7 @@ const CTASection = () => {
               asChild
               className="bg-white text-black hover:bg-sky-400 hover:text-white transition-all duration-300"
             >
-              <a href="#contact">{t("button")}</a>
+              <a href="#contact" dir="auto">{t("button")}</a>
             </Button>
           </div>
         </div>

@@ -2,6 +2,7 @@
   "Navbar": {
     "home": "Home",
     "whatwedo": "What We Do",
+    "ourstory": "Our Story",
     "reviews": "Reviews",
     "contact": "Contact Us",
     "pricing": "Pricing",
@@ -9,10 +10,11 @@
     "quote": "Free Quote"
   },
   "Hero": {
-    "badge": "Professional Web Design & SEO Agency",
+    "badge": "Professional Web Design Studio",
     "titlePart1": "We design and build",
     "titleHighlight": "websites",
-    "description": "builds high-performance websites with integrated SEO and Google Ads strategies that attract real clients and drive measurable growth for your business.",
+    "descriptionLead": "SkyEdge4K.Studio",
+    "description": "builds high-performance landing pages, business websites, and online stores that attract real clients and drive measurable growth for your business.",
     "btnProject": "Start Your Web Project",
     "btnCall": "Schedule a Strategy Call"
   },
@@ -20,31 +22,31 @@
     "marquee": {
       "item1": "Web Development with Real Code | No Monthly Platform Fees",
       "item2": "Custom Websites that Load Fast and Rank Higher",
-      "item3": "SEO Strategies Built from the Code Up",
-      "item4": "Google Ads Campaigns Focused on Measurable Growth",
+      "item3": "Modern Code Built for Speed and Structure",
+      "item4": "Landing Pages, Business Websites & Online Stores",
       "item5": "Professional Web Design for Businesses Seeking Results",
       "item6": "No WordPress or Shopify | 100% Custom Solutions",
       "item7": "Pay Once | Own Your Website Forever",
-      "item8": "Performance, Security, and SEO in Every Line of Code",
+      "item8": "Performance and Security in Every Line of Code",
       "item9": "Boost Visibility and Attract Real Clients",
-      "item10": "Smart Google Ads That Convert Visitors into Leads",
+      "item10": "Online Stores with Built-In CRM, Ready to Manage Yourself",
       "item11": "Websites Coded for Speed, Precision, and Scalability",
       "item12": "SkyEdge4K.studio | Building Digital Success with Code"
     },
     "features": {
       "title": "WHAT WE DO BEST?",
-      "description": "SkyEdge4K.studio builds websites and marketing systems that attract real clients, not just clicks. We combine professional coding, SEO strategy, and Google Ads management so your business stands out and grows efficiently.",
-      "dev": {
-        "title": "Custom Web Development",
-        "desc": "We design and build sites using real code for total freedom and maximum performance. No WordPress or Shopify, just custom, scalable, and lightning-fast sites."
+      "description": "SkyEdge4K.studio builds professional websites and online stores that attract real clients, not just clicks. Whether you need a landing page, a full business website, or an online store, we deliver it custom-coded or launched fast from our own premium, in-house templates.",
+      "landing": {
+        "title": "Landing Page Websites",
+        "desc": "A professional, high-converting landing page for any type of business, fully custom-built or launched fast from one of our own premium, in-house templates."
       },
-      "seo": {
-        "title": "SEO Optimization",
-        "desc": "We optimize your website from its core structure to improve visibility and ranking on Google."
+      "website": {
+        "title": "Professional Business Websites",
+        "desc": "A complete website that represents your business the right way, custom designed or built from our best in-market templates, made entirely by our own team."
       },
-      "ads": {
-        "title": "Google Ads Campaigns",
-        "desc": "Smart, ROI-focused campaigns designed to convert visitors into customers."
+      "store": {
+        "title": "Online Store with CRM",
+        "desc": "A fully working online store with a built-in CRM, so you can manage products, orders, and customers yourself, quickly and easily."
       }
     },
     "video": {
@@ -57,9 +59,22 @@
     },
     "cta": {
       "title": "READY TO GROW YOUR BUSINESS ONLINE?",
-      "description": "Partner with SkyEdge4K.studio for a fully coded, SEO-optimized website and results-driven Google Ads campaigns.",
+      "description": "Partner with SkyEdge4K.studio for a fully coded website or online store built to convert.",
       "button": "Start Your Project"
     }
+  },
+  "AboutFounders": {
+    "badge": "Our Story",
+    "title": "The People Behind It All",
+    "subtitle": "Two founders, one obsession: building websites that actually work for your business.",
+    "storyTitle": "Our Story",
+    "storyParagraphs": [
+      "We are Fernanda and Orr, the founders of <bold>SkyEdge4K</bold>. We are partners in both business and life.",
+      "Our journey began with a shared passion for creativity, design, and building meaningful connections. As a couple, we decided to turn that passion into a business that helps other businesses grow online.",
+      "We started our journey in Colombia, and along the way our work took us to the United States and Mexico, where we had the opportunity to collaborate with entrepreneurs from different industries and cultures.",
+      "Today, we are excited to begin a new chapter in Israel, where our focus is dedicated to building modern, high-performing websites. We create websites that are beautiful, fast, mobile-friendly, and designed to help businesses attract more customers and grow with confidence.",
+      "<bold>SkyEdge4K</bold> reflects who we are: a couple that combines creativity, technical expertise, and a genuine passion for helping businesses succeed. We believe every business has a unique story, and we're here to bring it to life through exceptional web design."
+    ]
   },
   "LogosSections": {
     "title": "JOIN OUR SATISFIED CLIENTS",
@@ -73,20 +88,34 @@
         "name": "Carlos Rivera, Founder of MELDENNE'S"
       },
       "sofia": {
-        "quote": "Their SEO strategy and Google Ads campaign brought us real clients. We saw a 200% increase in inquiries in the first month.",
+        "quote": "Our new website looks incredible and started bringing us real, qualified clients within weeks.",
         "name": "Sofía Morales, Director of Clean It"
+      },
+      "valentina": {
+        "quote": "Our online store finally looks premium. Since launching the new site, our average order value went up and cart abandonment dropped.",
+        "name": "Valentina Cruz, Owner of Sine A Guin"
+      },
+      "roberto": {
+        "quote": "Skyedge Studio built us a booking-ready site that actually reflects the quality of our care. New patient appointments doubled in the first month.",
+        "name": "Roberto Sánchez, Director of San Carlos Wellness Center"
+      },
+      "patricia": {
+        "quote": "Patients can now book appointments online in seconds. Our new website cut phone calls in half and made us look like the modern clinic we are.",
+        "name": "Patricia López, Administrator at Hetlital Clinic"
       }
     }
   },
   "CTASection": {
     "title": "Let’s build a website that works as hard as you do!",
-    "description": "SkyEdge4K.studio creates fully coded, high-performance websites optimized for SEO, speed, and conversions. No templates. Just results.",
+    "description": "SkyEdge4K.studio creates fully coded, high-performance websites optimized for speed and conversions. No templates. Just results.",
     "button": "Get Your Free Consultation"
   },
   "Testimonials": {
     "badge": "Client Feedback",
     "title": "What our clients say about SkyEdge4K.studio",
     "subtitle": "Real businesses. Real growth. Real results.",
+    "showMore": "Show More Reviews",
+    "showLess": "Show Less",
     "items": [
       {
         "name": "Laura Gómez",
@@ -110,7 +139,7 @@
         "name": "Andrés López",
         "role": "Real Estate Developer, NovaHomes",
         "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279797/samples/man-on-a-street.jpg",
-        "content": "This team created a dynamic property site with 3D tours and perfect SEO! It’s modern, responsive, and attracts real buyers—simply amazing."
+        "content": "This team created a dynamic property site with 3D tours and flawless performance! It’s modern, responsive, and attracts real buyers. Simply amazing."
       },
       {
         "name": "Fernanda Torres",
@@ -122,7 +151,7 @@
         "name": "Daniel Pérez",
         "role": "Owner, FitZone Gym",
         "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279783/samples/people/smiling-man.jpg",
-        "content": "My fitness site looks professional and is fully responsive. SkyEdge4K Studio handles our SEO and ads with precision—the results speak for themselves!"
+        "content": "My fitness site looks professional and is fully responsive. SkyEdge4K Studio delivered exactly what my gym needed. The results speak for themselves!"
       },
       {
         "name": "Camila Ríos",
@@ -135,15 +164,63 @@
         "role": "Photographer",
         "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279796/samples/look-up.jpg",
         "content": "Finally, a studio that builds real websites. My portfolio is now fast and stands out! Best of all, it's easy to update. Thanks, team!"
+      },
+      {
+        "name": "Valeria Gómez",
+        "role": "Owner, Bloom Florist Co.",
+        "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/cld-sample-3.jpg",
+        "content": "Our new online store lets customers order same-day flower deliveries in just a few clicks. Orders have never been easier to manage!"
+      },
+      {
+        "name": "Javier Molina",
+        "role": "CTO, Nexa Logistics",
+        "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/samples/people/jazz.jpg",
+        "content": "SkyEdge4K.studio built us a custom tracking dashboard integrated right into our site. Our team saves hours every week."
+      },
+      {
+        "name": "Renée Dubois",
+        "role": "Creative Director, Aurora Studio",
+        "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/samples/upscale-face-1.jpg",
+        "content": "The site captures our brand perfectly, bold, fast, and fully custom. Clients notice the difference immediately."
+      },
+      {
+        "name": "Isabella Cruz & Marta Ruiz",
+        "role": "Co-Founders, StudioLuxe Boutique",
+        "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/samples/two-ladies.jpg",
+        "content": "We finally have a store that matches our aesthetic. Sales have grown steadily since launch, no plugins, no headaches."
+      },
+      {
+        "name": "Diego Fernández",
+        "role": "Head Chef, La Cocina Restaurant",
+        "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/samples/people/kitchen-bar.jpg",
+        "content": "Our online reservations tripled after the new site launched. It loads instantly, even on mobile."
+      },
+      {
+        "name": "Andrea Silva",
+        "role": "Founder, Ride & Thrive Cycling Club",
+        "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/v1764279785/samples/people/bicycle.jpg",
+        "content": "Membership sign-ups moved online and it's been a game changer. The site is fast, clean, and easy for anyone to use."
+      },
+      {
+        "name": "Patricio León",
+        "role": "Managing Partner, León & Asociados",
+        "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/samples/smile.jpg",
+        "content": "A professional, trustworthy site that reflects our firm's reputation. New client inquiries have increased significantly."
+      },
+      {
+        "name": "Camila Duarte",
+        "role": "Program Director, EduNext Academy",
+        "avatar": "https://res.cloudinary.com/dtza2wtax/image/upload/samples/imagecon-group.jpg",
+        "content": "Parents can now enroll students online in minutes. SkyEdge4K.studio delivered exactly what our academy needed."
       }
     ]
   },
   "CTASectionForm": {
     "title": "Ready to Boost Your Business with a High-Performance Website?",
-    "description": "At <strong>SkyEdge4K</strong>, we design and develop stunning, fast, and SEO-optimized websites that not only look amazing—they <em>convert visitors into real clients</em>. Whether you need a corporate site, landing page, or e-commerce store, our team crafts digital experiences that elevate your brand.",
+    "description": "At <strong>SkyEdge4K</strong>, we design and develop stunning, fast websites that not only look amazing, they <em>convert visitors into real clients</em>. Whether you need a corporate site, landing page, or e-commerce store, our team crafts digital experiences that elevate your brand.",
     "bullets": [
       "Modern responsive websites that look perfect on every device",
-      "Fast-loading pages, SEO-optimized for Google ranking",
+      "Fast-loading pages built with clean, scalable code",
       "Conversion-focused design to turn traffic into sales",
       "Custom development for businesses, e-commerce & landing pages",
       "Full support from concept to launch and beyond"
@@ -176,15 +253,15 @@
   "FaqSection": {
     "badge": "FAQ",
     "title": "Frequently Asked Questions",
-    "description": "Have questions about SkyEdge4K.studio? Here are the most common answers about our web development, SEO, and Google Ads services.",
+    "description": "Have questions about SkyEdge4K.studio? Here are the most common answers about our landing pages, business websites, and online stores.",
     "items": [
       {
         "question": "Do you use platforms like WordPress or Wix?",
-        "answer": "No. At SkyEdge4K.studio, we build every website using real code (Next.js, React, and Tailwind). That means faster load times, better SEO, no platform limitations, and 100% ownership of your site—no monthly fees or templates."
+        "answer": "No. At SkyEdge4K.studio, we build every website using real code (Next.js, React, and Tailwind). That means faster load times, clean semantic structure, no platform limitations, and 100% ownership of your site, with no monthly fees or templates."
       },
       {
         "question": "Can you help my business appear on Google?",
-        "answer": "Yes! Every website we build is optimized for SEO from the code level up—including structure, speed, and metadata. We also offer ongoing SEO and Google Ads management to help your business rank higher."
+        "answer": "Yes! Every website we build starts with clean, well-structured code that gives you a strong technical foundation from day one."
       },
       {
         "question": "What makes your websites faster than others?",
@@ -195,8 +272,8 @@
         "answer": "No monthly platform fees! You pay once for development and you own your website forever. We can provide optional maintenance, but ownership remains 100% yours."
       },
       {
-        "question": "Can you manage my Google Ads campaigns too?",
-        "answer": "Absolutely. We specialize in high-performing Google Ads campaigns integrated with your site's analytics. We focus the budget on delivering a measurable ROI, not just clicks."
+        "question": "Do you offer ready-made templates or only custom designs?",
+        "answer": "Both! Choose one of our own premium, in-house templates for a faster launch, or go fully custom if you want something built from scratch. Either way, the code quality is the same."
       },
       {
         "question": "How long does it take to build a website?",
@@ -205,16 +282,14 @@
     ]
   },
   "Footer": {
-    "brandDescription": "We build high-performance, visually stunning websites designed to attract and convert. SEO and strategy that take your brand to the next level.",
+    "brandDescription": "We build high-performance, visually stunning websites designed to attract and convert. Strategy and design that take your brand to the next level.",
     "allRights": "All rights reserved.",
     "builtWith": "Built with strategy, design, and real code ⚡",
     "services": {
       "title": "Services",
-      "dev": "Web Development",
-      "seo": "SEO Optimization",
-      "ads": "Google & Social Ads",
-      "strategy": "Marketing Strategy",
-      "tours": "3D Virtual Tours"
+      "landing": "Landing Pages",
+      "website": "Business Websites",
+      "store": "Online Stores"
     },
     "company": {
       "title": "Company",
@@ -239,24 +314,22 @@
     "plans": {
       "landing": {
         "name": "Landing Page",
-        "price": "From $1,100 USD",
+        "price": "From $165 USD",
         "description": "High-conversion single page designed for maximum lead generation.",
         "features": [
           "100% Custom Code (React/Next.js)",
           "Conversion-Optimized UI/UX",
           "Ultra-Fast Performance",
-          "Basic SEO Implementation",
           "Analytics & Tracking Setup"
         ],
         "button": "Get Started"
       },
       "professional": {
         "name": "Professional Website",
-        "price": "From $2,200 USD",
+        "price": "From $300 USD",
         "description": "Complete corporate presence for established companies.",
         "features": [
           "Up to 6 Custom-Designed Pages",
-          "Advanced SEO Strategy",
           "Premium Motion & Animations",
           "CMS Integration (Edit your content)",
           "Speed-Prioritized Architecture",
@@ -266,7 +339,7 @@
       },
       "store": {
         "name": "Online Store",
-        "price": "From $3,500 USD",
+        "price": "From $835 USD",
         "description": "Robust e-commerce solution focused on sales and scalability.",
         "features": [
           "Custom Shopping Experience",

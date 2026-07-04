@@ -43,11 +43,11 @@ export function PricingSection() {
     <section id="pricing" className="py-24 w-full bg-secondary/30">
       <div className="w-full max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge className="text-xs font-medium">{t("badge")}</Badge>
-          <h2 className="mt-4 text-3xl font-semibold">
+          <Badge className="text-xs font-medium" dir="auto">{t("badge")}</Badge>
+          <h2 dir="auto" className="mt-4 text-3xl font-semibold">
             {t("title")}
           </h2>
-          <p className="mt-6 font-medium text-muted-foreground">
+          <p dir="auto" className="mt-6 font-medium text-muted-foreground">
             {t("subtitle")}
           </p>
         </div>
@@ -64,20 +64,21 @@ export function PricingSection() {
             >
               <div>
                 <div className="text-center mb-6">
-                  <h3 className="font-semibold text-xl mb-2 text-gray-900">
+                  <h3 dir="auto" className="font-semibold text-xl mb-2 text-gray-900">
                     {plan.name}
                   </h3>
-                  <div className="text-3xl font-bold mb-1 text-sky-600">
+                  <div dir="auto" className="text-3xl font-bold mb-1 text-sky-600">
                     {plan.price}
                   </div>
-                  <p className="text-sm text-gray-600 italic">{t("startingPrice")}</p>
-                  <p className="mt-4 text-sm text-gray-600">{plan.description}</p>
+                  <p dir="auto" className="text-sm text-gray-600 italic">{t("startingPrice")}</p>
+                  <p dir="auto" className="mt-4 text-sm text-gray-600">{plan.description}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8 text-sm text-gray-700">
                   {plan.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
+                      dir="auto"
                       className="flex items-start gap-2 leading-snug"
                     >
                       <Check className="w-5 h-5 text-green-500 shrink-0 mt-[2px]" />
@@ -97,7 +98,7 @@ export function PricingSection() {
                   }`}
                   variant={index === 1 ? "default" : "outline"}
                 >
-                  {plan.buttonText}
+                  <span dir="auto">{plan.buttonText}</span>
                 </Button>
               </div>
             </div>

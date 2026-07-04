@@ -22,11 +22,11 @@ export const FaqSection = () => {
     <section className="py-24 w-full">
       <div className="w-full max-w-3xl mx-auto px-4">
         <div className="text-center mb-12">
-          <Badge className="text-xs font-medium">{t("badge")}</Badge>
-          <h2 className="mt-4 text-3xl font-semibold">
+          <Badge className="text-xs font-medium" dir="auto">{t("badge")}</Badge>
+          <h2 dir="auto" className="mt-4 text-3xl font-semibold">
             {t("title")}
           </h2>
-          <p className="mt-6 font-medium text-muted-foreground">
+          <p dir="auto" className="mt-6 font-medium text-muted-foreground">
             {t("description")}
           </p>
         </div>
@@ -34,10 +34,10 @@ export const FaqSection = () => {
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left font-medium">
+              <AccordionTrigger dir="auto" className="text-left font-medium">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
+              <AccordionContent dir="auto" className="text-muted-foreground leading-relaxed">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

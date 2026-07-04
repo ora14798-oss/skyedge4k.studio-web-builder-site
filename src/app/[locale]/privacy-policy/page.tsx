@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Privacy Policy | SkyEdge4K.Studio",
   description:
-    "Learn how SkyEdge4K.Studio protects your data and ensures privacy for our marketing, SEO, and web development clients.",
+    "Learn how SkyEdge4K.Studio protects your data and ensures privacy for our marketing and web development clients.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
           At <strong>SkyEdge4K.Studio</strong>, we value your privacy and are
           committed to protecting your personal information. This Privacy Policy
           explains how we collect, use, and safeguard your data when you engage
-          with our marketing, SEO, and web development services.
+          with our marketing and web development services.
         </p>
 
         <h2 className="text-xl font-semibold text-white mt-6 mb-2">
