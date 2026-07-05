@@ -22,8 +22,39 @@ const AboutFoundersSection = () => {
           </p>
         </div>
 
-        <div className="mt-6 flex h-[62vh] min-h-[380px] flex-col overflow-hidden rounded-3xl border-2 shadow-sm sm:h-[58vh] sm:flex-row">
-          <div className="relative h-48 w-full flex-shrink-0 bg-muted sm:h-full sm:w-auto sm:aspect-[1333/1999]">
+        {/* Mobile: collage as full-bleed background behind the story */}
+        <div className="relative mt-6 min-h-[680px] overflow-hidden rounded-3xl border-2 sm:hidden">
+          <Image
+            src="/orr-fernanda-collage.png"
+            alt="Orr and Fernanda"
+            fill
+            className="object-cover opacity-40"
+          />
+
+          <div className="absolute inset-0 z-10 flex flex-col justify-center gap-2 px-6 py-6">
+            <h3
+              dir="auto"
+              className="text-lg font-bold text-red-600 [text-shadow:_0_0_1px_rgba(0,0,0,0.9)]"
+            >
+              {t("storyTitle")}
+            </h3>
+            {Array.from({ length: STORY_PARAGRAPH_COUNT }).map((_, i) => (
+              <p
+                key={i}
+                dir="auto"
+                className="text-center text-xs leading-5 text-black [text-shadow:_0_0_1px_rgba(0,0,0,0.9)]"
+              >
+                {t.rich(`storyParagraphs.${i}`, {
+                  bold: (chunks) => <strong className="font-semibold text-black">{chunks}</strong>,
+                })}
+              </p>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop / tablet: side-by-side layout */}
+        <div className="mt-6 hidden overflow-hidden rounded-3xl border-2 shadow-sm sm:flex sm:h-[58vh] sm:min-h-[380px] sm:flex-row">
+          <div className="relative h-full w-auto flex-shrink-0 bg-muted sm:aspect-[1333/1999]">
             <Image
               src="/orr-fernanda-collage.png"
               alt="Orr and Fernanda"
@@ -32,16 +63,12 @@ const AboutFoundersSection = () => {
             />
           </div>
 
-          <div className="flex flex-1 flex-col justify-center gap-2 overflow-y-auto px-6 py-6 sm:gap-3 sm:px-10 sm:py-8">
-            <h3 dir="auto" className="text-lg font-bold text-foreground sm:text-xl">
+          <div className="flex flex-1 flex-col justify-center gap-3 overflow-y-auto px-10 py-8">
+            <h3 dir="auto" className="text-xl font-bold text-foreground">
               {t("storyTitle")}
             </h3>
             {Array.from({ length: STORY_PARAGRAPH_COUNT }).map((_, i) => (
-              <p
-                key={i}
-                dir="auto"
-                className="text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6"
-              >
+              <p key={i} dir="auto" className="text-sm leading-6 text-muted-foreground">
                 {t.rich(`storyParagraphs.${i}`, {
                   bold: (chunks) => <strong className="font-semibold text-foreground">{chunks}</strong>,
                 })}
